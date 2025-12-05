@@ -1,0 +1,65 @@
+models:
+  - name: fct_customer_orders
+    description: "{{ doc('model__fct_customer_orders') }}"
+    columns:
+      - name: order_id
+        data_type: number
+        description: "{{ doc('column__order_id') }}"
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_id
+        data_type: number
+        description: "{{ doc('column__customer_id') }}"
+        data_tests:
+          - not_null
+      - name: customer_name
+        data_type: varchar
+        description: "{{ doc('column__customer_name') }}"
+        data_tests:
+          - not_null
+      - name: order_date
+        data_type: date
+        description: "{{ doc('column__order_date') }}"
+        data_tests:
+          - not_null
+      - name: order_status
+        data_type: varchar
+        description: "{{ doc('column__order_status') }}"
+        data_tests:
+          - not_null
+      - name: order_amount
+        data_type: number
+        description: "{{ doc('column__order_amount') }}"
+        data_tests:
+          - not_null
+      - name: payment_date
+        data_type: date
+        description: "{{ doc('column__payment_date') }}"
+        data_tests:
+          - not_null
+      - name: order_seq
+        data_type: number
+        description: "{{ doc('column__order_seq') }}"
+        data_tests:
+          - not_null
+      - name: customer_order_seq
+        data_type: number
+        description: "{{ doc('column__customer_order_seq') }}"
+        data_tests:
+          - not_null
+      - name: customer_order_status
+        data_type: varchar
+        description: "{{ doc('column__customer_order_status') }}"
+        data_tests:
+          - not_null
+      - name: customer_running_sales
+        data_type: number
+        description: "{{ doc('column__customer_running_sales') }}"
+        data_tests:
+          - not_null
+      - name: first_order_date
+        data_type: date
+        description: "{{ doc('column__first_order_date') }}"
+        data_tests:
+          - not_null

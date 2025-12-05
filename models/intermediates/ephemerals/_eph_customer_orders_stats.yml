@@ -1,0 +1,19 @@
+models:
+  - name: eph_customer_orders_stats
+    description: "{{ doc('model__eph_customer_orders_stats') }}"
+    columns:
+      - name: customer_id
+        data_type: number
+        description: "{{ doc('column__customer_id') }}"
+        tests:
+          - unique
+          - not_null
+      - name: first_order_date
+        data_type: date
+        description: "{{ doc('column__first_order_date') }}"
+      - name: last_order_date
+        data_type: date
+        description: "{{ doc('column__last_order_date') }}"
+      - name: number_of_orders
+        data_type: number
+        description: "{{ doc('column__number_of_orders') }}"

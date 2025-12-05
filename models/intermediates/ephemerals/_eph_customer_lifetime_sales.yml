@@ -1,0 +1,13 @@
+models:
+  - name: eph_customer_lifetime_sales
+    description: "{{ doc('model__eph_customer_lifetime_sales') }}"
+    columns:
+      - name: customer_id
+        data_type: number
+        description: "{{ doc('column__customer_id') }}"
+        tests:
+          - unique
+          - not_null
+      - name: lifetime_sales
+        data_type: number
+        description: "{{ doc('column__lifetime_sales') }}"

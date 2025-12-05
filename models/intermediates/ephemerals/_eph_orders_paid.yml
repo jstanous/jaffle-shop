@@ -1,0 +1,22 @@
+models:
+  - name: eph_orders_paid
+    description: "{{ doc('model__eph_orders_paid') }}"
+    columns:
+      - name: order_id
+        data_type: number
+        description: "{{ doc('column__order_id') }}"
+        tests:
+          - unique
+          - not_null
+      - name: order_date
+        data_type: date
+        description: "{{ doc('column__order_date') }}"
+      - name: order_status
+        data_type: varchar
+        description: "{{ doc('column__order_status') }}"
+      - name: order_amount
+        data_type: number
+        description: "{{ doc('column__order_amount') }}"
+      - name: payment_date
+        data_type: date
+        description: "{{ doc('column__payment_date') }}"

@@ -1,0 +1,29 @@
+models:
+  - name: stg_stripe__payments
+    description: "{{ doc('model__stg_stripe__payments') }}"
+    columns:
+      - name: payment_id
+        description: "{{ doc('column__payment_id') }}"
+        data_tests:
+          - not_null
+          - unique
+      - name: order_id
+        description: "{{ doc('column__order_id') }}"
+        data_tests:
+          - not_null
+      - name: payment_status
+        description: "{{ doc('column__payment_status') }}"
+        data_tests:
+          - not_null
+      - name: payment_method
+        description: "{{ doc('column__payment_method') }}"
+        data_tests:
+          - not_null
+      - name: payment_amount
+        description: "{{ doc('column__payment_amount') }}"
+        data_tests:
+          - not_null
+      - name: payment_date
+        description: "{{ doc('column__payment_date') }}"
+        data_tests:
+          - not_null

@@ -1,0 +1,13 @@
+models:
+  - name: eph_orders_customer_running_sales
+    description: "{{ doc('model__eph_orders_customer_running_sales') }}"
+    columns:
+      - name: order_id
+        data_type: number
+        description: "{{ doc('column__order_id') }}"
+        tests:
+          - unique
+          - not_null
+      - name: customer_running_sales
+        data_type: number
+        description: "{{ doc('column__customer_running_sales') }}"

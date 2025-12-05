@@ -1,0 +1,16 @@
+models:
+  - name: eph_orders_sequences
+    description: "{{ doc('model__eph_orders_sequences') }}"
+    columns:
+      - name: order_id
+        data_type: number
+        description: "{{ doc('column__order_id') }}"
+        tests:
+          - unique
+          - not_null
+      - name: order_seq
+        data_type: number
+        description: "{{ doc('column__order_seq') }}"
+      - name: customer_order_seq
+        data_type: number
+        description: "{{ doc('column__customer_order_seq') }}"

@@ -1,0 +1,40 @@
+models:
+  - name: int_orders
+    description: "{{ doc('model__int_orders') }}"
+    columns:
+      - name: order_id
+        data_type: number
+        description: "{{ doc('column__order_id') }}"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        data_type: number
+        description: "{{ doc('column__customer_id') }}"
+      - name: customer_name
+        data_type: varchar
+        description: "{{ doc('column__customer_name') }}"
+      - name: order_date
+        data_type: date
+        description: "{{ doc('column__order_date') }}"
+      - name: order_status
+        data_type: varchar
+        description: "{{ doc('column__order_status') }}"
+      - name: order_amount
+        data_type: number
+        description: "{{ doc('column__order_amount') }}"
+      - name: payment_date
+        data_type: date
+        description: "{{ doc('column__payment_date') }}"
+      - name: order_seq
+        data_type: number
+        description: "{{ doc('column__order_seq') }}"
+      - name: customer_order_seq
+        data_type: number
+        description: "{{ doc('column__customer_order_seq') }}"
+      - name: customer_order_status
+        data_type: varchar
+        description: "{{ doc('column__customer_order_status') }}"
+      - name: customer_running_sales
+        data_type: number
+        description: "{{ doc('column__customer_running_sales') }}"

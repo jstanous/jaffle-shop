@@ -1,0 +1,25 @@
+models:
+  - name: fct_orders
+    description: "{{ doc('model__fct_orders') }}"
+    columns:
+      - name: order_id
+        data_type: number
+        description: "{{ doc('column__order_id') }}"
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_id
+        data_type: number
+        description: "{{ doc('column__customer_id') }}"
+        data_tests:
+          - not_null
+      - name: order_date
+        data_type: date
+        description: "{{ doc('column__order_date') }}"
+        data_tests:
+          - not_null
+      - name: order_amount
+        data_type: number
+        description: "{{ doc('column__order_amount') }}"
+        data_tests:
+          - not_null

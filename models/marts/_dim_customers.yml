@@ -1,0 +1,31 @@
+models:
+  - name: dim_customers
+    description: "{{ doc('model__dim_customers') }}"
+    columns:
+      - name: customer_id
+        data_type: number
+        description: "{{ doc('column__customer_id') }}"
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_name
+        data_type: varchar
+        description: "{{ doc('column__customer_name') }}"
+        data_tests:
+          - not_null
+      - name: first_order_date
+        description: "{{ doc('column__first_order_date') }}"
+        data_type: date
+      - name: last_order_date
+        description: "{{ doc('column__last_order_date') }}"
+        data_type: date
+      - name: number_of_orders
+        description: "{{ doc('column__number_of_orders') }}"
+        data_type: number
+        data_tests:
+          - not_null
+      - name: lifetime_sales
+        description: "{{ doc('column__lifetime_sales') }}"
+        data_type: number
+        data_tests:
+          - not_null

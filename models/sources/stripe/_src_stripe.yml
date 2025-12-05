@@ -1,0 +1,64 @@
+sources:
+  - name: stripe
+    database: jaffle_shop
+    schema: raw
+    description: "{{ doc('source__stripe') }}"
+    config:
+      freshness:
+        warn_after:
+          count: 1
+          period: day
+        error_after:
+          count: 2
+          period: day
+      loaded_at_field: _etl_loaded_at
+    tables:
+      - name: payments
+        description: "{{ doc('table__payments') }}"
+#        tags: ["jaffle_shop", "payments", "raw"]
+        columns:
+          - name: id
+            data_type: number
+            description: "{{ doc('column__payment_id') }}"
+            data_tests:
+              - unique
+              - not_null
+#            meta:
+#              role: unique key
+          - name: orderid
+            data_type: number
+            description: "{{ doc('column__order_id') }}"
+            data_tests:
+              - not_null
+              - relationships:
+                  arguments:
+                    to: source('jaffle_shop','orders')
+                    field: id
+#            meta:
+#              role: foreign key
+          - name: paymentmethod
+            data_type: varchar
+            description: "{{ doc('column__payment_method') }}"
+            data_tests:
+              - not_null
+              - accepted_values:
+                  arguments:
+                    values: ['credit_card','bank_transfer','gift_card','coupon']
+          - name: status
+            data_type: varchar
+            description: "{{ doc('column__payment_status') }}"
+            data_tests:
+              - not_null
+              - accepted_values:
+                  arguments:
+                    values: ['success','fail']
+          - name: amount
+            data_type: number
+            description: "{{ doc('column__payment_amount') }}"
+            data_tests:
+              - not_null
+          - name: created
+            data_type: date
+            description: "{{ doc('column__payment_date') }}"
+            data_tests:
+              - not_null
