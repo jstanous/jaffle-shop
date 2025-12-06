@@ -1,141 +1,155 @@
-# Jaffle Shop exemplars for dbt, Snowflake, and GitHub
+# Jaffle Shop Exemplars for dbt, Snowflake, and GitHub
 
-A concise, governance‑friendly set of exemplars showing how to integrate dbt with Snowflake and GitHub for the Jaffle Shop curriculum. Scripts follow the dbt Certified Developer Path but are adapted, not exact lesson artifacts.
+A governance‑friendly set of exemplars showing how to integrate **dbt** with **Snowflake** and **GitHub** for the Jaffle Shop curriculum.  
+Scripts follow the dbt Certified Developer Path but are adapted, not exact lesson artifacts.
 
----
+## Repo Structure
 
-## Repository Layout
+```text
+jaffle-shop/
+├─ README.md                   # Commentary registry and exemplar overview
+├── integrations/
+│   ├── Snowflake/             # Snowflake integration scripts
+│   └── GitHub/                # Placeholder for GitHub integration artifacts
+├── macros/                    # Utility macros (cents_to_dollars, schema/database generators)
+├── models/
+│   ├── sources/               # Source definitions for Jaffle Shop and Stripe
+│   ├── staging/               # Staging models for customers, orders, payments
+│   ├── intermediates/         # Intermediate models customers, orders, payments
+│   │   └── ephemerals/        # Ephemerals models with transformation logic
+│   └── marts/                 # Common Dimensional tables  
+│       └── finance/           # Finance domain fact tables
+├── seeds/                     # Placeholder for seed data
+├── snapshots/                 # Placeholder for snapshot definitions
+└── tests/                     # Custom assertions (e.g., positive totals for payments)
+```
 
-- integrations/
-  - Snowflake/
-    - Snowflake_dbt_Integration_Setup.sql — dbt role, warehouse, and integration setup.
-    - Snowflake_GitHub_PublicRepo_Setup.sql — public GitHub repo integration (no credentials).
-    - Snowflake_GitHub_PrivateRepo_Setup.sql — private GitHub repo integration (PAT secret).
-    - Snowflake_JaffleShop_Setup.sql — creates JAFFLE_SHOP database, schemas, and raw tables.
-    - Snowflake_JaffleShop_Ingestion.sql — loads exemplar CSVs from public S3 into RAW schema.
-  - GitHub/ — placeholder for GitHub-side integration artifacts.
+## Repo Maintenance
 
-- macros/
-  - Utility macros for dbt projects:
-    - cents_to_dollars.sql
-    - generate_database_name.sqlx
-    - generate_schema_name.sqlx
+This repository is **not developed directly**.  
+It serves as a **public exemplar feed**, synchronized from a private dbt Learning repository via **GitHub Actions**.
 
-- models/
-  - sources/ — source definitions for Jaffle Shop and Stripe.
-  - staging/ — staging models for customers, orders, payments.
-  - intermediates/ — int_* models and ephemerals for transformations.
-  - marts/ — dimensional and fact tables (customers, orders, finance).
+- **Private repo:** Active development, experimentation, and course‑aligned work  
+- **Public repo:** Curated exemplars for consultable, governance‑friendly reference  
+- **Automation:** GitHub Actions push artifacts from private to public  
+- **Implication:** Direct edits here are discouraged; changes should be made in the private repo and propagated automatically
 
-- seeds/ — placeholder for seed data.
-- snapshots/ — placeholder for snapshot definitions.
-- tests/ — custom assertions (e.g., positive totals for payments).
+This design ensures:
 
----
-
-> Designed to be consultable and reproducible: each script includes commentary blocks covering steps, roles, and governance notes.
-
----
+- Clear separation between private learning work and public exemplars  
+- Reproducibility and auditability through automated sync pipelines  
+- A clean, stakeholder‑grade repo aligned with the dbt Certified Developer Path
 
 ## Prerequisites
 
-- **Snowflake roles:** Ability to switch between ACCOUNTADMIN, SYSADMIN, SECURITYADMIN, and a working **DBT_ROLE** for least‑privilege execution.
-- **Warehouses & databases:** A compute warehouse (e.g., **DBT_WH**) and permission to create databases/schemas and Git integrations.
-- **GitHub:** For private integration, a **PAT** scoped to `repo` and stored as a Snowflake SECRET.
-- **dbt (optional):** If you plan to run dbt models/tests, install dbt-snowflake and configure profiles to point at the JAFFLE_SHOP database.
+This repository is designed for **dbt** with **Snowflake**.  
+Other warehouses may adapt the modeling approach, but the integration scripts require Snowflake.
 
----
-
-## Quick start
-
-1. **Provision environment (Snowflake_JaffleShop_Setup.sql)**
-   - **Creates:** JAFFLE_SHOP database; schemas RAW, STAGING, INTERMEDIATES, MARTS; DBT.JAFFLE_SHOP internal schema.
-   - **Governance:** Drops PUBLIC schemas; alternates roles (SYSADMIN for objects, SECURITYADMIN for grants).
-
-2. **Load exemplar data (Snowflake_JaffleShop_Ingestion.sql)**
-   - **Loads:** PUBLIC S3 CSVs into RAW.CUSTOMERS, RAW.ORDERS, RAW.PAYMENTS via COPY INTO with CSV file format.
-   - **Validate:** Run trailing SELECTs to confirm row counts and basic ingestion health.
-
-3. **Integrate repo (choose one)**
-   - **Public:** Create API integration with `git_https_api`, allowed prefix for public repo, and a Snowflake Git repository object.
-   - **Private:** Create SECRET with PAT; API integration allowing the secret; Snowflake Git repository object with credentials.
-
-4. **Optional: dbt flow**
-   - **Run dbt:** `dbt deps && dbt seed && dbt run && dbt test`
-   - **Target schemas:** STAGING, INTERMEDIATES, MARTS under JAFFLE_SHOP.
-
----
-
-## Governance notes
-
-- **Least‑privilege:** Separate object creation (SYSADMIN) from grants (SECURITYADMIN). Run ingestion under **DBT_ROLE**.
-- **Schema hygiene:** Drop PUBLIC schemas to enforce explicit paths; isolate integration artifacts in **DBT.JAFFLE_SHOP** and GitHub schema.
-- **Secrets & rotation:** Private integration uses PATs in Snowflake SECRET objects; rotate regularly and scope to `repo`.
-- **Lineage & auditability:** Raw tables include ETL timestamps; comments on objects clarify purpose.
-
----
-
-## Project layout
-
-- **Top‑level folders:** analyses, integrations, macros, models, seeds, snapshots, tests.
-- **Key files:** `dbt_project.yml` (project config), `LICENSE` (MIT).  
-- **About:** Repo description emphasizes Jaffle Shop exemplars adapted for Snowflake/GitHub integration.
-
----
-
-## License
-
-- **MIT License:** Permissive use with attribution and no warranty. See `LICENSE` in the repo.
-
-
-
-
-
-
-
-
-# dbt Jaffle Shop with Snowflake & GitHub Integration
-
-This repo contains exemplar scripts and models for integrating dbt with Snowflake and GitHub, inspired by the dbt Certified Developer Path. Scripts reflect lesson concepts but are adapted for Snowflake/GitHub integration — not exact lesson artifacts.
-
----
-
+- **dbt:** Working dbt setup and configured to point at your target database  
+- **GitHub:** Ability to clone/pull from a GitHub repo. For private integration, a PAT scoped to `repo` stored securely  
+- **Database environment:** A compatible database/schema where dbt can create and manage objects  
+- **Snowflake (required for integration scripts):** Permissions to create warehouses, databases, schemas, and roles  
 
 ## Quick Start
 
-1. Provision environment
-   Run integrations/Snowflake/Snowflake_JaffleShop_Setup.sql in Snowflake.
+1. **Setup Snowflake for dbt (if not already provisioned)**  
+   Run `integrations/Snowflake/Snowflake_dbt_Integration_Setup.sql`  
+   - Creates dedicated warehouse (**DBT_WH**) with autosuspend/autoresume  
+   - Creates default (**DBT**) and development (**DBT_DEV**) databases  
+   - Drops PUBLIC schemas  
+   - Creates **DBT_ROLE** with least‑privilege grants and assigns to current user  
+   - Creates resource monitor (**DBT_RM**) for credit quota and notifications  
 
-2. Ingest exemplar data
-   Run integrations/Snowflake/Snowflake_JaffleShop_Ingestion.sql in Snowflake.
+2. **Setup Jaffle Shop environment**  
+   Run `integrations/Snowflake/Snowflake_JaffleShop_Setup.sql`  
+   - Creates **JAFFLE_SHOP** database and schemas (RAW, STAGING, INTERMEDIATES, MARTS)  
+   - Drops PUBLIC schemas  
+   - Uses SYSADMIN for object creation and SECURITYADMIN for grants  
 
-3. Integrate GitHub repo
-   - Public: run Snowflake_GitHub_PublicRepo_Setup.sql
-  
+3. **Load Jaffle Shop data**  
+   Run `integrations/Snowflake/Snowflake_JaffleShop_Ingestion.sql`  
+   - Loads CSVs from public S3 into RAW tables (CUSTOMERS, ORDERS, PAYMENTS)  
+   - Validates ingestion with trailing SELECTs  
 
----
+4. **Optional: Snowflake/GitHub Integration**  
+   - **Public:** Run `Snowflake_GitHub_PublicRepo_Setup.sql` to create API integration with `git_https_api` and Snowflake Git repository object  
+   - **Private:** Run `Snowflake_GitHub_PrivateRepo_Setup.sql` to create SECRET with PAT, API integration allowing the secret, and Snowflake Git repository object with credentials
 
-## Governance Notes
+## Approach
 
-- Least privilege: SYSADMIN for object creation, SECURITYADMIN for grants, DBT_ROLE for ingestion.
-- Schema hygiene: PUBLIC schemas dropped; explicit schemas for RAW, STAGING, INTERMEDIATES, MARTS.
-- Secrets: PATs stored in Snowflake SECRET objects for private repo integration.
-- Lineage: Raw tables include ETL timestamps; doc markdown files provide context.
+- **Modeling**
+  - **Layering discipline:** `src → stg → int (eph) → dim/fct` aligns with dbt best practices.  
+  - **Source artifacts (`src`):** Source YAML and markdown files are kept in dedicated `/sources/` directories.  
+  - **Staging models (`stg`):** Organized into subfolders reflecting source systems.  
+  - **Ephemeral models (`eph`):** Transformation logic isolated here to enforce modularity.  
+  - **Intermediate models (`int`):** Assembles staging and transformational ephemeral models.  
+  - **Marts models (`dim`/`fct`):** Final dimensional and fact tables, ready for analysis and consumption.  
 
----
+- **Documentation**
+  - **Commentary:** SQL integration scripts include structured commentary for consultation.  
+  - **Doc blocks:** Source, table, model, and column documentation maintained in model‑specific markdown files.  
+  - **Lineage:** Column doc blocks reference their model of origin.  
 
-## Usage
+- **Governance**
+  - **Least‑privilege:**  
+    - SYSADMIN for object creation  
+    - SECURITYADMIN for grants  
+    - DBT_ROLE for ingestion/modeling  
+  - **Schema hygiene:**  
+    - PUBLIC schemas dropped  
+    - Integration artifacts isolated in `DBT.JAFFLE_SHOP` and `DBT.GITHUB` schemas  
+    - Development artifacts housed in `DBT_DEV` database  
+  - **Secrets & rotation:** PATs stored in Snowflake SECRET objects; rotate regularly and scope to `repo`.  
+  - **Auditability:** Raw tables include ETL timestamps; commentary blocks and markdown notes clarify purpose.
 
-This repo is designed as a consultable exemplar:
-- Public repo demonstrates credential-free integration.
-- Private repo scripts show enterprise-ready integration with secrets.
-- Models follow dbt’s Certified Developer Path structure for clarity and reproducibility.
+## dbt Learning Path
 
----
+This project aligns with the **dbt Certified Developer Path**.  
+Courses marked with ✅ have been completed.
+
+### Milestone #1: dbt Fundamentals
+
+- **dbt Fundamentals (dbt Studio)** ✅ — foundational steps with dbt Studio; ~5 hours  
+- **dbt Fundamentals (VS Code)** — foundational steps with VS Code Extension; ~5 hours  
+
+### Milestone #2: Jinja, Macros, and Packages
+
+- **Jinja, Macros, and Packages (dbt Studio)** ✅ — extend dbt with Jinja/macros; ~2 hours  
+- **Jinja, Macros, and Packages (VS Code)** — extend dbt with VS Code Extension; ~2 hours  
+
+### Milestone #3: Advanced dbt Techniques
+
+- **Refactoring SQL for Modularity** ✅ — migrate legacy code into modular dbt models; ~3.5 hours  
+- **Incremental Models** — build models incrementally; ~1.5 hours  
+- **Snapshots** — track historical records with slowly changing dimensions  
+- **Analyses and Seeds (dbt Studio)** — ad hoc queries and seed CSVs; ~1 hour  
+- **Exposures** — configure downstream dependencies; ~2 hours  
+- **Understanding State** — state management in dbt; ~4 minutes  
+- **dbt retry** — rebuild pipelines efficiently; ~3 minutes  
+- **dbt Mesh Introduction** — overview for certification exam; ~1 minute  
+- **dbt Mesh** — boost reliability and speed at scale  
+- **Advanced Testing** — custom tests and configurations; ~4 hours  
+- **Advanced Deployment** — CI/CD and advanced deployment; ~4 hours  
+- **dbt Clone** — create database object copies; ~5 minutes  
+- **Grants** — control permissions for models/seeds/snapshots; ~6 minutes  
+- **Python Models** — leverage Python for non‑SQL use cases; ~6 minutes  
 
 ## License
 
-MIT License — permissive use with attribution, no warranty.
-   - Private: run Snowflake_GitHub_PrivateRepo_Setup.sql (requires PAT secret)
+MIT License — permissive use with attribution, no warranty.  
+See LICENSE in the repo.
 
-4. Run dbt
+## Final Thoughts
+
+The Jaffle Shop project illustrates a simplified data architecture.  
+This repository is intended to demonstrate understanding and application of dbt best practices as practiced in dbt coursework.  
+
+It includes governance‑friendly practices for dbt + Snowflake integration, including:
+
+- Clear layering discipline (`src → stg → eph → int → dim/fct`)
+- Heavy use of ephemerals to enforce modularity and reduce clutter
+- Structured commentary and doc blocks for reproducibility
+- Least‑privilege execution and schema hygiene
+- Automated sync from private learning repo to public exemplar feed
+
+The goal is to provide a reference that aligns with the dbt Certified Developer Path while remaining adaptable for future extensions.
