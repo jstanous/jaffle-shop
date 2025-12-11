@@ -10,7 +10,7 @@ jaffle-shop/
 ├─ README.md                   # Commentary registry and exemplar overview
 ├── integrations/
 │   ├── Snowflake/             # Snowflake integration scripts
-│   └── GitHub/                # Placeholder for GitHub integration artifacts
+│   └── GitHub/                # GitHub integration artifacts
 ├── macros/                    # Utility macros (cents_to_dollars, schema/database generators)
 ├── models/
 │   ├── sources/               # Source definitions for Jaffle Shop and Stripe
