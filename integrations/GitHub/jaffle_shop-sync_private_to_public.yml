@@ -1,0 +1,57 @@
+name: Sync to Public Exemplar
+
+on:
+  push:
+    branches:
+      - main
+    # Optional: only run when these paths change
+    paths:
+      - "jaffle_shop/**"
+      - "models/jaffle_shop/**"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout private repo (this repo)
+      - name: Checkout private repo
+        uses: actions/checkout@v4
+
+      # Checkout public repo into subfolder
+      - name: Checkout public repo
+        uses: actions/checkout@v4
+        with:
+          repository: jstanous/jaffle-shop
+          path: public-stage
+          token: ${{ secrets.PAT_Public_JaffleShop }}
+
+      # Sync models with path remapping
+      - name: Sync root
+        run: |
+          rsync -av --delete ./jaffle_shop/ ./public-stage/
+      - name: Sync models
+        run: |
+          rsync -av --delete ./models/jaffle_shop/models/ ./public-stage/models/
+
+      # Rename .sqlx to .sql in public repo
+      - name: Rename .sqlx to .sql
+        run: |
+          find ./public-stage/macros -type f -name "*.sqlx" -exec bash -c 'mv "$0" "${0%.sqlx}.sql"' {} \;
+
+      # Prepare commit message (top line of private commit, prefixed)
+      - name: Prepare commit message
+        run: |
+          COMMIT_MSG="Sync from private repo: $(echo "${{ github.event.head_commit.message }}" | head -n1)"
+          echo "COMMIT_MSG=$COMMIT_MSG" >> $GITHUB_ENV
+
+
+      # Commit & push to public repo
+      - name: Commit changes
+        run: |
+          cd public-stage
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "${COMMIT_MSG} (source: ${{ github.sha }})" || echo "No changes to commit"
+          git push
