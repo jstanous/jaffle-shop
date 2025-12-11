@@ -1,45 +1,50 @@
-name: Sync to Public Exemplar
+name: Sync Jaffle Shop Public Exemplar
 
 on:
+  # Run when jaffle-shop artifacts change
   push:
     branches:
       - main
-    # Optional: only run when these paths change
     paths:
       - "jaffle_shop/**"
       - "models/jaffle_shop/**"
+  # Run on demand
+  workflow_dispatch:
 
 jobs:
   sync:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout private repo (this repo)
+      # Checkout private dbt repo into /private
       - name: Checkout private repo
         uses: actions/checkout@v4
+        with:
+          path: 'private'
 
-      # Checkout public repo into subfolder
+      # Checkout public jaffle-shop repo into /public with secret for public repo
       - name: Checkout public repo
         uses: actions/checkout@v4
         with:
-          repository: jstanous/jaffle-shop
-          path: public-stage
+          repository: 'jstanous/jaffle-shop'
+          path: 'public'
           token: ${{ secrets.PAT_Public_JaffleShop }}
 
-      # Sync models with path remapping
+      # Sync Jaffle Shop dbt artifacts with path remapping
+      # Exclude .git directory to preserve repo
       - name: Sync root
         run: |
-          rsync -av --delete ./jaffle_shop/ ./public-stage/
+          rsync -av --delete --exclude '.git' ./private/jaffle_shop/ ./public/
       - name: Sync models
         run: |
-          rsync -av --delete ./models/jaffle_shop/models/ ./public-stage/models/
+          rsync -av --delete --exclude '.git' ./private/models/jaffle_shop/models/ ./public/models/
 
-      # Rename .sqlx to .sql in public repo
+      # Rename macro exemplars .sqlx to .sql in public
       - name: Rename .sqlx to .sql
         run: |
-          find ./public-stage/macros -type f -name "*.sqlx" -exec bash -c 'mv "$0" "${0%.sqlx}.sql"' {} \;
+          find ./public/macros -type f -name "*.sqlx" -exec bash -c 'mv "$0" "${0%.sqlx}.sql"' {} \;
 
-      # Prepare commit message (top line of private commit, prefixed)
+      # Prepare commit message using commit message from private repo
       - name: Prepare commit message
         run: |
           COMMIT_MSG="Sync from private repo: $(echo "${{ github.event.head_commit.message }}" | head -n1)"
@@ -49,9 +54,9 @@ jobs:
       # Commit & push to public repo
       - name: Commit changes
         run: |
-          cd public-stage
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "${COMMIT_MSG} (source: ${{ github.sha }})" || echo "No changes to commit"
-          git push
+          cd public;
+          git config user.name "github-actions[bot]";
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com";
+          git add .;
+          git commit -m "${COMMIT_MSG} (source: ${{ github.sha }})" || echo "No changes to commit";
+          git push origin HEAD:main;
