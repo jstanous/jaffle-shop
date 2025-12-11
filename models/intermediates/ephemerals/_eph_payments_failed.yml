@@ -1,5 +1,5 @@
 models:
-  - name: int_payments_failed
+  - name: eph_payments_failed
     description: "{{ doc('model__int_payments_failed') }}"
     columns:
       - name: payment_id

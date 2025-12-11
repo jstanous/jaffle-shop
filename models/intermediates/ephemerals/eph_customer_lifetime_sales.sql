@@ -2,7 +2,7 @@
 
 WITH payments AS
     (SELECT * 
-       FROM {{ ref('int_payments') }}
+       FROM {{ ref('eph_payments_successful') }}
     )
 
    , customer_lts AS

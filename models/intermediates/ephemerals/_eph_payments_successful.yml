@@ -1,0 +1,29 @@
+models:
+  - name: eph_payments
+    description: "{{ doc('model__int_payments') }}"
+    columns:
+      - name: payment_id
+        data_type: number
+        description: "{{ doc('column__payment_id') }}"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        data_type: number
+        description: "{{ doc('column__customer_id') }}"
+      - name: order_id
+        data_type: number
+        description: "{{ doc('column__order_id') }}"
+      - name: payment_date
+        data_type: date
+        description: "{{ doc('column__payment_date') }}"
+      - name: payment_status
+        data_type: varchar
+        description: "{{ doc('column__payment_status') }}"
+      - name: payment_method
+        data_type: varchar
+        description: "{{ doc('column__payment_method') }}"
+      - name: payment_amount
+        data_type: number
+        description: "{{ doc('column__payment_amount') }}"
+

@@ -7,7 +7,7 @@ WITH orders AS
 
    , payments AS
     (SELECT * 
-       FROM {{ ref('int_payments') }}
+       FROM {{ ref('eph_payments_successful') }}
     )
 
    , orders_paid AS
