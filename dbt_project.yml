@@ -37,19 +37,19 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   jaffle_shop:
-    +database: DBT_DB
-    +schema: JAFFLE_SHOP
+    +database: dbt_db
+    +schema: jaffle_shop
     staging:
-      +database: JAFFLE_SHOP
-      +schema: STAGING
+      +database: jaffle_shop
+      +schema: staging
       +materialized: view
     intermediates:
-      +database: JAFFLE_SHOP
-      +schema: INTERMEDIATES
+      +database: jaffle_shop
+      +schema: intermediates
       +materialized: view
     marts:
-      +database: JAFFLE_SHOP
-      +schema: MARTS
+      +database: jaffle_shop
+      +schema: marts
       +materialized: table
   audits:
     enabled: false
