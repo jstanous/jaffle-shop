@@ -120,7 +120,7 @@ Courses marked with ✅ have been completed.
 ### Milestone #3: Advanced dbt Techniques
 
 - **Refactoring SQL for Modularity** ✅ — migrate legacy code into modular dbt models; ~3.5 hours  
-- **Incremental Models** — build models incrementally; ~1.5 hours  
+- **Incremental Models** ✅ — build models incrementally; ~1.5 hours  
 - **Snapshots** — track historical records with slowly changing dimensions  
 - **Analyses and Seeds (dbt Studio)** — ad hoc queries and seed CSVs; ~1 hour  
 - **Exposures** — configure downstream dependencies; ~2 hours  
