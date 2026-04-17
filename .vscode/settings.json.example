@@ -1,0 +1,30 @@
+{
+  "terminal.integrated.cwd": "${workspaceFolder}",
+
+  "python.defaultInterpreterPath": "<path to python>/envs/dbt-dev/python.exe",
+
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "args": [
+        "-NoExit",
+        "-Command",
+        "conda activate dbt-dev"
+      ]
+    }
+  },
+
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+  "files.associations": {
+    "*.sql": "snowflake-sql",
+    "**/analyses/**/*.sql": "jinja-sql",
+    "**/macros/**/*.sql": "jinja-sql",
+    "**/models/**/*.sql": "jinja-sql",
+    "**/seeds/**/*.sql": "jinja-sql",
+    "**/snapshots/**/*.sql": "jinja-sql",
+    "**/tests/**/*.sql": "jinja-sql",
+    "*.yml": "dbt",
+    "*.yaml": "dbt"
+  }
+}

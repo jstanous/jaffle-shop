@@ -1,0 +1,4 @@
+groups:
+  - name: finance
+    owner:
+      name: Jaffle Shop Finance

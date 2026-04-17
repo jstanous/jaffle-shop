@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Prod Build",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "dbt",
+      "args": [
+        "build",
+        "--target", "prod"
+      ]
+    },
+    {
+      "name": "Slim CI",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "dbt",
+      "args": [
+        "build",
+        "--select", "state:modified+",
+        "--state", "artifacts/prod",
+        "--defer"
+      ]
+    }
+  ]
+}

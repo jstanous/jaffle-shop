@@ -1,0 +1,3 @@
+customer_status,customer_status_description
+new, first order for new customer
+return, returning customer with multiple orders

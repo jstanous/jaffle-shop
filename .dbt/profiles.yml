@@ -1,0 +1,51 @@
+##################################################################################
+# This is not the active profiles.yml location for localized dbt installations.
+# Contents must be copied into <user directory>/.dbt/profiles.yml
+#
+# Set the following environment variables for your environment before running dbt:
+#   SNOWFLAKE_ACCOUNT
+#   SNOWFLAKE_USER
+#   SNOWFLAKE_USER_PRIVATE_KEY_PATH
+#   SNOWFLAKE_USER_PRIVATE_PASSPHRASE
+#   SNOWFLAKE_DBT_PRIVATE_KEY_PATH
+##################################################################################
+
+jaffle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      authenticator: snowflake_jwt
+      private_key_path: "{{ env_var('SNOWFLAKE_USER_PRIVATE_KEY_PATH') }}"
+      private_key_passphrase: "{{ env_var('SNOWFLAKE_USER_PRIVATE_PASSPHRASE') }}"
+      role: jaffle_shop_dev_role
+      warehouse: jaffle_shop_wh
+      database: jaffle_shop_dev
+      threads: 16
+      schema: "{{ env_var('SNOWFLAKE_USER') }}"
+
+    qa:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: jaffle_shop_dbt_user
+      authenticator: snowflake_jwt
+      private_key_path: "{{ env_var('SNOWFLAKE_DBT_PRIVATE_KEY_PATH') }}"
+      role: jaffle_shop_dbt_role
+      warehouse: jaffle_shop_wh
+      database: jaffle_shop_qa
+      threads: 16
+      schema: raw
+
+    prod:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: jaffle_shop_dbt_user
+      authenticator: snowflake_jwt
+      private_key_path: "{{ env_var('SNOWFLAKE_DBT_PRIVATE_KEY_PATH') }}"
+      role: jaffle_shop_dbt_role
+      warehouse: jaffle_shop_wh
+      database: jaffle_shop
+      threads: 16
+      schema: raw

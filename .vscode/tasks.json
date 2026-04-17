@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Prod Build",
+      "type": "shell",
+      "command": "dbt build --target prod",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Copy Prod Artifacts",
+      "type": "shell",
+      "command": "rm -rf artifacts/prod && mkdir -p artifacts/prod && cp -r target/* artifacts/prod/",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Slim CI",
+      "type": "shell",
+      "command": "dbt build --select state:modified+ --state artifacts/prod --defer",
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+version: 2
+seeds:
+  - name: employees
+    columns:
+      - name: employee_id
+      - name: email
+      - name: customer_id
+  - name: order_status
+    columns:
+      - name: order_status
+      - name: order_status_description
+  - name: payment_method
+    columns:
+      - name: payment_method
+      - name: payment_method_description
+  - name: payment_status
+    columns:
+      - name: payment_status
+      - name: payment_status_description
+  - name: customer_status
+    columns:
+      - name: customer_status
+      - name: customer_status_description

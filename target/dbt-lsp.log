@@ -1,0 +1,726 @@
+==================== 2026-04-17T16:04:21.890420Z | c0e79979-8844-4a97-abc8-21e7444f357d ====================
+16:04:21.890774 [info ]: Starting dbt LSP server
+16:04:21.890945 [info ]: Connecting to LSP client on port 8000
+16:04:21.954145 [info ]: Successfully connected to LSP client
+16:04:21.954166 [info ]: Creating LSP service...
+16:04:22.112929 [info ]: Creating LSP server...
+16:04:22.112947 [info ]: Starting LSP server...
+==================== 2026-04-17T16:18:24.230145Z | 3dd09e3f-d4ff-403e-9e75-79987a59e801 ====================
+16:18:24.230367 [info ]: Starting dbt LSP server
+16:18:24.230483 [info ]: Connecting to LSP client on port 8000
+16:18:24.241719 [info ]: Successfully connected to LSP client
+16:18:24.241740 [info ]: Creating LSP service...
+16:18:24.437390 [info ]: Creating LSP server...
+16:18:24.437430 [info ]: Starting LSP server...
+16:18:28.632123 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-04-17T16:24:29.805839Z | 16e613aa-dd35-43b1-a702-3f675827362c ====================
+16:24:29.806526 [info ]: Starting dbt LSP server
+16:24:29.806672 [info ]: Connecting to LSP client on port 8000
+16:24:29.869103 [info ]: Successfully connected to LSP client
+16:24:29.869124 [info ]: Creating LSP service...
+16:24:30.062553 [info ]: Creating LSP server...
+16:24:30.062673 [info ]: Starting LSP server...
+==================== 2026-04-17T16:30:14.114641Z | 0a91dcd2-568d-4f9f-ad12-02d9e0901e63 ====================
+16:30:14.114878 [info ]: Starting dbt LSP server
+16:30:14.114994 [info ]: Connecting to LSP client on port 8000
+16:30:14.157029 [info ]: Successfully connected to LSP client
+16:30:14.157049 [info ]: Creating LSP service...
+16:30:14.413983 [info ]: Creating LSP server...
+16:30:14.414104 [info ]: Starting LSP server...
+16:30:38.808778 [info ]: Loading ~/.dbt/profiles.yml
+16:30:49.493500 [info ]: Started loading project
+16:30:49.495151 [info ]: Loading ~/.dbt/profiles.yml
+16:30:49.529230 [info ]:    Started resolving packages from packages.yml
+16:30:49.998637 [info ]:   Finished [  0.47s] resolving packages from packages.yml (6 items)
+16:30:50.025061 [debug]:    Started loading packages
+16:30:50.837987 [debug]:     Loaded [  0.81s] packages
+16:30:50.840792 [info ]: Finished loading project [  1.35s]
+16:30:50.841880 [info ]: Started parsing
+16:30:52.395998 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\dag\dag.yml [  0.03s]
+16:30:52.406264 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\documentation\documentation.yml [  0.01s]
+16:30:52.418794 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\governance\governance.yml [  0.01s]
+16:30:52.419700 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\performance\performance.yml [  0.00s]
+16:30:52.424569 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\structure\structure.yml [  0.00s]
+16:30:52.435503 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\tests\testing.yml [  0.01s]
+16:30:52.436390 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\staging\variables\variables.yml [  0.00s]
+16:30:52.439578 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\seeds\seeds.yml [  0.00s]
+16:30:52.461264 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\core\int_all_dag_relationships.sql [  0.00s]
+16:30:52.472092 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\core\int_all_graph_resources.sql [  0.01s]
+16:30:52.486640 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\core\int_direct_relationships.sql [  0.01s]
+16:30:52.496430 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\dag\fct_direct_join_to_source.sql [  0.01s]
+16:30:52.539411 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\dag\fct_duplicate_sources.sql [  0.04s]
+16:30:52.540894 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\dag\fct_hard_coded_references.sql [  0.00s]
+16:30:52.553038 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\dag\fct_marts_or_intermediate_dependent_on_source.sql [  0.01s]
+16:30:52.559678 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\dag\fct_model_fanout.sql [  0.01s]
+16:30:52.562399 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\dag\fct_multiple_sources_joined.sql [  0.00s]
+16:30:52.564188 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\dag\fct_rejoining_of_upstream_concepts.sql [  0.00s]
+16:30:52.569717 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\dag\fct_root_models.sql [  0.01s]
+16:30:52.577737 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\dag\fct_source_fanout.sql [  0.01s]
+16:30:52.582270 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\dag\fct_staging_dependent_on_marts_or_intermediate.sql [  0.00s]
+16:30:52.595063 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\dag\fct_staging_dependent_on_staging.sql [  0.01s]
+16:30:52.596554 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\dag\fct_too_many_joins.sql [  0.00s]
+16:30:52.598129 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\dag\fct_unused_sources.sql [  0.00s]
+16:30:52.604021 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\documentation\fct_documentation_coverage.sql [  0.01s]
+16:30:52.605752 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\documentation\fct_undocumented_models.sql [  0.00s]
+16:30:52.607350 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\documentation\fct_undocumented_source_tables.sql [  0.00s]
+16:30:52.609076 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\documentation\fct_undocumented_sources.sql [  0.00s]
+16:30:52.619059 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\governance\fct_exposures_dependent_on_private_models.sql [  0.01s]
+16:30:52.621861 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\governance\fct_public_models_without_contract.sql [  0.00s]
+16:30:52.630280 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\governance\fct_undocumented_public_models.sql [  0.01s]
+16:30:52.639711 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\performance\fct_chained_views_dependencies.sql [  0.01s]
+16:30:52.651955 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\performance\fct_exposure_parents_materializations.sql [  0.01s]
+16:30:52.657308 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\structure\fct_model_directories.sql [  0.01s]
+16:30:52.660408 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\structure\fct_model_naming_conventions.sql [  0.00s]
+16:30:52.670185 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\structure\fct_source_directories.sql [  0.01s]
+16:30:52.672593 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\structure\fct_test_directories.sql [  0.00s]
+16:30:52.674286 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\tests\fct_missing_primary_key_tests.sql [  0.00s]
+16:30:52.675719 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\tests\fct_sources_without_freshness.sql [  0.00s]
+16:30:52.686874 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\tests\fct_test_coverage.sql [  0.01s]
+16:30:52.697431 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\marts\tests\intermediate\int_model_test_summary.sql [  0.01s]
+16:30:52.706177 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\staging\graph\base\base_exposure_relationships.sql [  0.01s]
+16:30:52.714536 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\staging\graph\base\base_metric_relationships.sql [  0.01s]
+16:30:52.723840 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\staging\graph\base\base_node_columns.sql [  0.01s]
+16:30:52.736605 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\staging\graph\base\base_node_relationships.sql [  0.01s]
+16:30:52.745439 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\staging\graph\base\base_source_columns.sql [  0.01s]
+16:30:52.747159 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\staging\graph\stg_columns.sql [  0.00s]
+16:30:52.752699 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\staging\graph\stg_exposure_relationships.sql [  0.01s]
+16:30:52.763337 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\staging\graph\stg_exposures.sql [  0.01s]
+16:30:52.765228 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\staging\graph\stg_metric_relationships.sql [  0.00s]
+16:30:52.777957 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\staging\graph\stg_metrics.sql [  0.01s]
+16:30:52.779684 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\staging\graph\stg_node_relationships.sql [  0.00s]
+16:30:52.793686 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\staging\graph\stg_nodes.sql [  0.01s]
+16:30:52.808218 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\staging\graph\stg_sources.sql [  0.01s]
+16:30:52.811501 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\staging\variables\stg_naming_convention_folders.sql [  0.00s]
+16:30:52.876175 [debug]: Finished parsing dbt_packages\dbt_project_evaluator\models\staging\variables\stg_naming_convention_prefixes.sql [  0.07s]
+16:30:52.937773 [debug]: Finished parsing models\exposures\exp_jaffle_shop_customers.yml [  0.00s]
+16:30:52.938339 [debug]: Finished parsing models\exposures\exp_jaffle_shop_orders.yml [  0.00s]
+16:30:52.955673 [debug]: Finished parsing models\intermediate\_int_customers.yml [  0.02s]
+16:30:52.957343 [debug]: Finished parsing models\intermediate\_int_orders.yml [  0.00s]
+16:30:52.958550 [debug]: Finished parsing models\intermediate\_int_payments.yml [  0.00s]
+16:30:52.959494 [debug]: Finished parsing models\intermediate\ephemeral\_eph_customer_orders_stats.yml [  0.00s]
+16:30:52.960123 [debug]: Finished parsing models\intermediate\ephemeral\_eph_orders_customer_running_sales.yml [  0.00s]
+16:30:52.960832 [debug]: Finished parsing models\intermediate\ephemeral\_eph_orders_paid.yml [  0.00s]
+16:30:52.961289 [debug]: Finished parsing models\intermediate\ephemeral\_eph_orders_sequences.yml [  0.00s]
+16:30:52.962442 [debug]: Finished parsing models\intermediate\ephemeral\_eph_payments_failed.yml [  0.00s]
+16:30:52.976124 [debug]: Finished parsing models\intermediate\ephemeral\_eph_payments_successful.yml [  0.01s]
+16:30:52.976629 [debug]: Finished parsing models\jaffle_shop_groups.yml [  0.00s]
+16:30:52.977790 [debug]: Finished parsing models\marts\_dim_customers.yml [  0.00s]
+16:30:52.978846 [debug]: Finished parsing models\marts\finance\_fct_customer_orders.yml [  0.00s]
+16:30:52.985620 [debug]: Finished parsing models\marts\finance\_fct_orders.yml [  0.01s]
+16:30:52.987201 [debug]: Finished parsing models\sources\jaffle_shop\_src_jaffle_shop.yml [  0.00s]
+16:30:52.988613 [debug]: Finished parsing models\sources\stripe\_src_stripe.yml [  0.00s]
+16:30:52.989562 [debug]: Finished parsing models\staging\jaffle_shop\_stg_jaffle_shop.yml [  0.00s]
+16:30:52.990795 [debug]: Finished parsing models\staging\stripe\_stg_stripe.yml [  0.00s]
+16:30:52.991403 [debug]: Finished parsing seeds\seeds.yml [  0.00s]
+16:30:52.991905 [debug]: Finished parsing snapshots\orders_snapshot.yml [  0.00s]
+16:30:53.023456 [debug]: Finished parsing target\snapshots\orders_snapshot.sql [  0.00s]
+16:30:53.045382 [debug]: Finished parsing models\intermediate\ephemeral\eph_customer_orders_stats.sql [  0.02s]
+16:30:53.074981 [debug]: Finished parsing models\intermediate\ephemeral\eph_orders_customer_running_sales.sql [  0.03s]
+16:30:53.077552 [debug]: Finished parsing models\intermediate\ephemeral\eph_orders_paid.sql [  0.00s]
+16:30:53.078724 [debug]: Finished parsing models\intermediate\ephemeral\eph_orders_sequences.sql [  0.00s]
+16:30:53.081047 [debug]: Finished parsing models\intermediate\ephemeral\eph_payments_failed.sql [  0.00s]
+16:30:53.091640 [debug]: Finished parsing models\intermediate\ephemeral\eph_payments_successful.sql [  0.01s]
+16:30:53.113611 [debug]: Finished parsing models\intermediate\int_customers.sql [  0.02s]
+16:30:53.115642 [debug]: Finished parsing models\intermediate\int_orders.sql [  0.00s]
+16:30:53.119385 [debug]: Finished parsing models\intermediate\int_payments.sql [  0.00s]
+16:30:53.122060 [debug]: Finished parsing models\marts\dim_customers_v1.sql [  0.00s]
+16:30:53.123947 [debug]: Finished parsing models\marts\dim_customers_v2.sql [  0.00s]
+16:30:53.154118 [debug]: Finished parsing models\marts\finance\fct_customer_orders.sql [  0.03s]
+16:30:53.156648 [debug]: Finished parsing models\marts\finance\fct_orders.sql [  0.00s]
+16:30:53.157862 [debug]: Finished parsing models\staging\jaffle_shop\stg_jaffle_shop__customers.sql [  0.00s]
+16:30:53.159442 [debug]: Finished parsing models\staging\jaffle_shop\stg_jaffle_shop__orders.sql [  0.00s]
+16:30:53.185886 [debug]: Finished parsing models\staging\stripe\stg_stripe__payments.sql [  0.03s]
+16:30:53.187345 [debug]: Finished parsing analyses\JaffleShop_datatests.sql [  0.00s]
+16:30:53.188822 [debug]: Finished parsing analyses\interactive_ad_hoc_testing.sql [  0.00s]
+16:30:53.190083 [debug]: Finished parsing analyses\order_status_values.sql [  0.00s]
+16:30:53.195252 [debug]: Finished parsing analyses\total_revenue.sql [  0.01s]
+16:30:53.196766 [debug]: Finished parsing tests\assert__int_orders__amount_average_is_greater_than_one.sql [  0.00s]
+16:30:53.203716 [debug]: Finished parsing tests\assert__stg_stripe__positive_total_for_payments.sql [  0.01s]
+16:30:53.207442 [info ]: Finished parsing [  2.37s]
+16:30:53.253153 [info ]: DOWNLOADING deferral manifest
+16:30:54.306430 [info ]: DOWNLOADED deferral manifest to C:\Repositories\GitHub\jaffle-shop\target/.lsp\dbt_cloud_defer\manifest.json
+16:30:54.415465 [info ]: Cached model count updated: 16 models (estimate)
+16:30:54.415566 [info ]: Cached model count updated: 64 models (accurate)
+16:30:54.416078 [info ]: Started scheduling
+16:30:54.416841 [info ]: Finished scheduling [  0.00s]
+16:30:54.416999 [debug]: Compilation - 0 nodes selected: {}
+16:30:54.417162 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+16:30:54.417252 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+16:30:54.417344 [info ]: Started scheduling
+16:30:54.422478 [info ]: Finished scheduling [  0.01s]
+16:30:54.423626 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "JAFFLE_SHOP", schema: "RAW", table: "PAYMENTS" }) and interval: None
+16:30:54.423857 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "JAFFLE_SHOP", schema: "RAW", table: "CUSTOMERS" }) and interval: None
+16:30:54.423938 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "JAFFLE_SHOP", schema: "RAW", table: "ORDERS" }) and interval: None
+16:30:54.463482 [info ]: Started deferring state
+16:30:54.463650 [info ]: Finished deferring state [  0.00s]
+16:30:55.281232 [info ]: Started building task graph
+16:30:55.281501 [info ]: Finished building task graph [  0.00s]
+16:30:55.298151 [info ]: Started scheduling
+16:30:55.298384 [info ]: Finished scheduling [  0.00s]
+16:30:55.300789 [info ]: Cached model count updated: 64 models (accurate)
+16:30:57.611927 [info ]: Started loading project
+16:30:57.613260 [info ]: Loading ~/.dbt/profiles.yml
+16:30:57.768034 [info ]: Cached model count updated: 16 models (estimate)
+16:30:57.768135 [info ]: Cached model count updated: 64 models (accurate)
+16:30:57.769031 [info ]: Started scheduling
+16:30:57.769246 [info ]: Finished scheduling [  0.00s]
+16:30:57.769275 [debug]: Compilation - 0 nodes selected: {}
+16:30:57.769297 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+16:30:57.769304 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+16:30:57.819259 [info ]: Started deferring state
+16:30:57.819306 [info ]: Finished deferring state [  0.00s]
+16:30:59.104764 [info ]: Started building task graph
+16:30:59.104910 [info ]: Finished building task graph [  0.00s]
+16:30:59.122234 [info ]: Started scheduling
+16:30:59.127416 [info ]: Finished scheduling [  0.01s]
+16:30:59.128411 [info ]: Finished loading project [  1.52s]
+16:30:59.134373 [info ]: Cached model count updated: 64 models (accurate)
+16:31:00.727508 [info ]: Started loading project
+16:31:00.729595 [info ]: Loading ~/.dbt/profiles.yml
+16:31:00.839906 [info ]: Cached model count updated: 16 models (estimate)
+16:31:00.839940 [info ]: Cached model count updated: 64 models (accurate)
+16:31:00.840235 [info ]: Started scheduling
+16:31:00.848543 [info ]: Finished scheduling [  0.01s]
+16:31:00.848721 [debug]: Compilation - 76 nodes selected: {"analysis.jaffle_shop.JaffleShop_datatests", "analysis.jaffle_shop.interactive_ad_hoc_testing", "analysis.jaffle_shop.order_status_values", "analysis.jaffle_shop.total_revenue", "exposure.jaffle_shop.Customers_data", "exposure.jaffle_shop.orders_data", "model.dbt_project_evaluator.base_exposure_relationships", "model.dbt_project_evaluator.base_metric_relationships", "model.dbt_project_evaluator.base_node_columns", "model.dbt_project_evaluator.base_node_relationships", "model.dbt_project_evaluator.base_source_columns", "model.dbt_project_evaluator.fct_chained_views_dependencies", "model.dbt_project_evaluator.fct_direct_join_to_source", "model.dbt_project_evaluator.fct_documentation_coverage", "model.dbt_project_evaluator.fct_duplicate_sources", "model.dbt_project_evaluator.fct_exposure_parents_materializations", "model.dbt_project_evaluator.fct_exposures_dependent_on_private_models", "model.dbt_project_evaluator.fct_hard_coded_references", "model.dbt_project_evaluator.fct_marts_or_intermediate_dependent_on_source", "model.dbt_project_evaluator.fct_missing_primary_key_tests", "model.dbt_project_evaluator.fct_model_directories", "model.dbt_project_evaluator.fct_model_fanout", "model.dbt_project_evaluator.fct_model_naming_conventions", "model.dbt_project_evaluator.fct_multiple_sources_joined", "model.dbt_project_evaluator.fct_public_models_without_contract", "model.dbt_project_evaluator.fct_rejoining_of_upstream_concepts", "model.dbt_project_evaluator.fct_root_models", "model.dbt_project_evaluator.fct_source_directories", "model.dbt_project_evaluator.fct_source_fanout", "model.dbt_project_evaluator.fct_sources_without_freshness", "model.dbt_project_evaluator.fct_staging_dependent_on_marts_or_intermediate", "model.dbt_project_evaluator.fct_staging_dependent_on_staging", "model.dbt_project_evaluator.fct_test_coverage", "model.dbt_project_evaluator.fct_test_directories", "model.dbt_project_evaluator.fct_too_many_joins", "model.dbt_project_evaluator.fct_undocumented_models", "model.dbt_project_evaluator.fct_undocumented_public_models", "model.dbt_project_evaluator.fct_undocumented_source_tables", "model.dbt_project_evaluator.fct_undocumented_sources", "model.dbt_project_evaluator.fct_unused_sources", "model.dbt_project_evaluator.int_all_dag_relationships", "model.dbt_project_evaluator.int_all_graph_resources", "model.dbt_project_evaluator.int_direct_relationships", "model.dbt_project_evaluator.int_model_test_summary", "model.dbt_project_evaluator.stg_columns", "model.dbt_project_evaluator.stg_exposure_relationships", "model.dbt_project_evaluator.stg_exposures", "model.dbt_project_evaluator.stg_metric_relationships", "model.dbt_project_evaluator.stg_metrics", "model.dbt_project_evaluator.stg_naming_convention_folders", "model.dbt_project_evaluator.stg_naming_convention_prefixes", "model.dbt_project_evaluator.stg_node_relationships", "model.dbt_project_evaluator.stg_nodes", "model.dbt_project_evaluator.stg_sources", "model.jaffle_shop.dim_customers.v1", "model.jaffle_shop.dim_customers.v2", "model.jaffle_shop.eph_customer_orders_stats", "model.jaffle_shop.eph_orders_customer_running_sales", "model.jaffle_shop.eph_orders_paid", "model.jaffle_shop.eph_orders_sequences", "model.jaffle_shop.eph_payments_failed", "model.jaffle_shop.eph_payments_successful", "model.jaffle_shop.fct_customer_orders", "model.jaffle_shop.fct_orders", "model.jaffle_shop.int_customers", "model.jaffle_shop.int_orders", "model.jaffle_shop.int_payments", "model.jaffle_shop.stg_jaffle_shop__customers", "model.jaffle_shop.stg_jaffle_shop__orders", "model.jaffle_shop.stg_stripe__payments", "seed.dbt_project_evaluator.dbt_project_evaluator_exceptions", "seed.jaffle_shop.customer_status", "seed.jaffle_shop.employees", "seed.jaffle_shop.order_status", "seed.jaffle_shop.payment_method", "seed.jaffle_shop.payment_status"}
+16:31:00.853705 [info ]: Started deferring state
+16:31:00.853815 [info ]: Finished deferring state [  0.00s]
+16:31:00.855053 [info ]: Started downloading schemas
+16:31:00.856451 [info ]: Finished loading project [  0.13s]
+16:31:06.360484 [debug]: Query executed on node unknown:
+describe table "JAFFLE_SHOP_DEV"."JSTANOUS_DBT_PROJ_EVAL"."STG_NODES"
+16:31:06.811795 [debug]: Query executed on node unknown:
+describe table "JAFFLE_SHOP_DEV"."JSTANOUS_DBT_PROJ_EVAL"."STG_EXPOSURES"
+16:31:06.945774 [debug]: Query executed on node unknown:
+describe table "JAFFLE_SHOP_DEV"."JSTANOUS_DBT_PROJ_EVAL"."STG_METRICS"
+16:31:07.372970 [debug]: Query executed on node unknown:
+describe table "JAFFLE_SHOP_DEV"."JSTANOUS_DBT_PROJ_EVAL"."STG_SOURCES"
+16:31:07.576179 [debug]: Query executed on node unknown:
+describe table "JAFFLE_SHOP_DEV"."JSTANOUS_DBT_PROJ_EVAL"."BASE_NODE_COLUMNS"
+16:31:07.626970 [debug]: Query executed on node unknown:
+describe table "JAFFLE_SHOP_DEV"."JSTANOUS_DBT_PROJ_EVAL"."BASE_SOURCE_COLUMNS"
+16:31:07.946370 [info ]: Finished downloading schemas [  7.09s]
+16:31:08.895090 [info ]: Started building task graph
+16:31:08.896283 [info ]: Finished building task graph [  0.00s]
+16:31:09.026303 [info ]: Started rendering (74 nodes)
+16:31:09.026474 [info ]: Started seed jstanous_ref.payment_status
+16:31:09.026601 [debug]: Started rendering seed jstanous_ref.payment_status
+16:31:09.026682 [info ]: Started seed jstanous_ref.payment_method
+16:31:09.026692 [debug]: Started rendering seed jstanous_ref.payment_method
+16:31:09.026707 [info ]: Started seed jstanous_ref.order_status
+16:31:09.026714 [debug]: Started rendering seed jstanous_ref.order_status
+16:31:09.026725 [info ]: Started seed jstanous_ref.employees
+16:31:09.026734 [debug]: Started rendering seed jstanous_ref.employees
+16:31:09.026747 [info ]: Started seed jstanous_ref.customer_status
+16:31:09.026755 [debug]: Started rendering seed jstanous_ref.customer_status
+16:31:09.026790 [info ]: Started model jstanous_marts_finance.fct_customer_orders
+16:31:09.026800 [debug]: Started rendering model jstanous_marts_finance.fct_customer_orders
+16:31:09.026813 [info ]: Started model jstanous_intermediate.eph_payments_failed
+16:31:09.026820 [debug]: Started rendering model jstanous_intermediate.eph_payments_failed
+16:31:09.026833 [info ]: Started model jstanous_marts.dim_customers_v2
+16:31:09.026840 [debug]: Started rendering model jstanous_marts.dim_customers_v2
+16:31:09.026852 [info ]: Started model jstanous_dbt_proj_eval.stg_columns
+16:31:09.026859 [debug]: Started rendering model jstanous_dbt_proj_eval.stg_columns
+16:31:09.026871 [info ]: Started model jstanous_dbt_proj_eval.fct_unused_sources
+16:31:09.026878 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_unused_sources
+16:31:09.026890 [info ]: Started model jstanous_dbt_proj_eval.fct_undocumented_sources
+16:31:09.026899 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_undocumented_sources
+16:31:09.026911 [info ]: Started model jstanous_dbt_proj_eval.fct_undocumented_source_tables
+16:31:09.026918 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_undocumented_source_tables
+16:31:09.026929 [info ]: Started model jstanous_dbt_proj_eval.fct_undocumented_public_models
+16:31:09.026936 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_undocumented_public_models
+16:31:09.026949 [info ]: Started model jstanous_dbt_proj_eval.fct_undocumented_models
+16:31:09.026956 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_undocumented_models
+16:31:09.026967 [info ]: Started model jstanous_dbt_proj_eval.fct_too_many_joins
+16:31:09.026975 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_too_many_joins
+16:31:09.026990 [info ]: Started model jstanous_dbt_proj_eval.fct_test_directories
+16:31:09.026997 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_test_directories
+16:31:09.027008 [info ]: Started model jstanous_dbt_proj_eval.fct_test_coverage
+16:31:09.027015 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_test_coverage
+16:31:09.027025 [info ]: Started model jstanous_dbt_proj_eval.fct_staging_dependent_on_staging
+16:31:09.027033 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_staging_dependent_on_staging
+16:31:09.027045 [info ]: Started model jstanous_dbt_proj_eval.fct_staging_dependent_on_marts_or_intermediate
+16:31:09.027052 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_staging_dependent_on_marts_or_intermediate
+16:31:09.027065 [info ]: Started model jstanous_dbt_proj_eval.fct_sources_without_freshness
+16:31:09.027072 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_sources_without_freshness
+16:31:09.027084 [info ]: Started model jstanous_dbt_proj_eval.fct_source_fanout
+16:31:09.027091 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_source_fanout
+16:31:09.027102 [info ]: Started model jstanous_dbt_proj_eval.fct_source_directories
+16:31:09.027108 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_source_directories
+16:31:09.027118 [info ]: Started model jstanous_dbt_proj_eval.fct_root_models
+16:31:09.027125 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_root_models
+16:31:09.027136 [info ]: Started model jstanous_dbt_proj_eval.fct_rejoining_of_upstream_concepts
+16:31:09.027143 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_rejoining_of_upstream_concepts
+16:31:09.027155 [info ]: Started model jstanous_dbt_proj_eval.fct_public_models_without_contract
+16:31:09.027162 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_public_models_without_contract
+16:31:09.027172 [info ]: Started model jstanous_dbt_proj_eval.fct_multiple_sources_joined
+16:31:09.027179 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_multiple_sources_joined
+16:31:09.027190 [info ]: Started model jstanous_dbt_proj_eval.fct_model_naming_conventions
+16:31:09.027197 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_model_naming_conventions
+16:31:09.027208 [info ]: Started model jstanous_dbt_proj_eval.fct_model_fanout
+16:31:09.027214 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_model_fanout
+16:31:09.027226 [info ]: Started model jstanous_dbt_proj_eval.fct_model_directories
+16:31:09.027234 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_model_directories
+16:31:09.027249 [info ]: Started model jstanous_dbt_proj_eval.fct_missing_primary_key_tests
+16:31:09.027256 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_missing_primary_key_tests
+16:31:09.027267 [info ]: Started model jstanous_dbt_proj_eval.int_model_test_summary
+16:31:09.027273 [debug]: Started rendering model jstanous_dbt_proj_eval.int_model_test_summary
+16:31:09.027284 [info ]: Started model jstanous_dbt_proj_eval.fct_marts_or_intermediate_dependent_on_source
+16:31:09.027292 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_marts_or_intermediate_dependent_on_source
+16:31:09.027303 [info ]: Started model jstanous_dbt_proj_eval.fct_hard_coded_references
+16:31:09.027310 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_hard_coded_references
+16:31:09.027320 [info ]: Started model jstanous_dbt_proj_eval.fct_exposures_dependent_on_private_models
+16:31:09.027327 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_exposures_dependent_on_private_models
+16:31:09.027338 [info ]: Started model jstanous_dbt_proj_eval.fct_exposure_parents_materializations
+16:31:09.027347 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_exposure_parents_materializations
+16:31:09.027359 [info ]: Started model jstanous_dbt_proj_eval.fct_duplicate_sources
+16:31:09.027367 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_duplicate_sources
+16:31:09.027378 [info ]: Started model jstanous_dbt_proj_eval.fct_documentation_coverage
+16:31:09.027386 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_documentation_coverage
+16:31:09.027398 [info ]: Started model jstanous_dbt_proj_eval.fct_direct_join_to_source
+16:31:09.027405 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_direct_join_to_source
+16:31:09.027415 [info ]: Started model jstanous_dbt_proj_eval.fct_chained_views_dependencies
+16:31:09.027422 [debug]: Started rendering model jstanous_dbt_proj_eval.fct_chained_views_dependencies
+16:31:09.027434 [info ]: Started seed jstanous_dbt_proj_eval.dbt_project_evaluator_exceptions
+16:31:09.027441 [debug]: Started rendering seed jstanous_dbt_proj_eval.dbt_project_evaluator_exceptions
+16:31:09.027452 [info ]: Started model jstanous_dbt_proj_eval.int_all_dag_relationships
+16:31:09.027459 [debug]: Started rendering model jstanous_dbt_proj_eval.int_all_dag_relationships
+16:31:09.027470 [info ]: Started model jstanous_dbt_proj_eval.int_direct_relationships
+16:31:09.027477 [debug]: Started rendering model jstanous_dbt_proj_eval.int_direct_relationships
+16:31:09.027488 [info ]: Started model jstanous_dbt_proj_eval.stg_node_relationships
+16:31:09.027495 [debug]: Started rendering model jstanous_dbt_proj_eval.stg_node_relationships
+16:31:09.027506 [info ]: Started model jstanous_dbt_proj_eval.stg_metric_relationships
+16:31:09.027513 [debug]: Started rendering model jstanous_dbt_proj_eval.stg_metric_relationships
+16:31:09.027524 [info ]: Started model jstanous_dbt_proj_eval.stg_exposure_relationships
+16:31:09.027532 [debug]: Started rendering model jstanous_dbt_proj_eval.stg_exposure_relationships
+16:31:09.027543 [info ]: Started model jstanous_dbt_proj_eval.int_all_graph_resources
+16:31:09.027550 [debug]: Started rendering model jstanous_dbt_proj_eval.int_all_graph_resources
+16:31:09.027563 [info ]: Started model jstanous_dbt_proj_eval.stg_sources
+16:31:09.027570 [debug]: Started rendering model jstanous_dbt_proj_eval.stg_sources
+16:31:09.027584 [info ]: Started model jstanous_dbt_proj_eval.stg_nodes
+16:31:09.027592 [debug]: Started rendering model jstanous_dbt_proj_eval.stg_nodes
+16:31:09.027604 [info ]: Started model jstanous_dbt_proj_eval.stg_naming_convention_prefixes
+16:31:09.027610 [debug]: Started rendering model jstanous_dbt_proj_eval.stg_naming_convention_prefixes
+16:31:09.027621 [info ]: Started model jstanous_dbt_proj_eval.stg_naming_convention_folders
+16:31:09.027627 [debug]: Started rendering model jstanous_dbt_proj_eval.stg_naming_convention_folders
+16:31:09.027637 [info ]: Started model jstanous_dbt_proj_eval.stg_metrics
+16:31:09.027645 [debug]: Started rendering model jstanous_dbt_proj_eval.stg_metrics
+16:31:09.027655 [info ]: Started model jstanous_dbt_proj_eval.stg_exposures
+16:31:09.027684 [debug]: Started rendering model jstanous_dbt_proj_eval.stg_exposures
+16:31:09.027699 [info ]: Started model jstanous_dbt_proj_eval.base_source_columns
+16:31:09.027708 [debug]: Started rendering model jstanous_dbt_proj_eval.base_source_columns
+16:31:09.027719 [info ]: Started model jstanous_dbt_proj_eval.base_node_relationships
+16:31:09.027728 [debug]: Started rendering model jstanous_dbt_proj_eval.base_node_relationships
+16:31:09.027739 [info ]: Started model jstanous_dbt_proj_eval.base_node_columns
+16:31:09.027746 [debug]: Started rendering model jstanous_dbt_proj_eval.base_node_columns
+16:31:09.027757 [info ]: Started model jstanous_dbt_proj_eval.base_metric_relationships
+16:31:09.027764 [debug]: Started rendering model jstanous_dbt_proj_eval.base_metric_relationships
+16:31:09.027777 [info ]: Started model jstanous_dbt_proj_eval.base_exposure_relationships
+16:31:09.027824 [debug]: Started rendering model jstanous_dbt_proj_eval.base_exposure_relationships
+16:31:09.027875 [info ]: Started model jstanous_marts_finance.fct_orders
+16:31:09.027885 [debug]: Started rendering model jstanous_marts_finance.fct_orders
+16:31:09.027898 [info ]: Started model jstanous_intermediate.eph_orders_sequences
+16:31:09.027906 [debug]: Started rendering model jstanous_intermediate.eph_orders_sequences
+16:31:09.027945 [info ]: Started model jstanous_marts.dim_customers_v1
+16:31:09.027955 [debug]: Started rendering model jstanous_marts.dim_customers_v1
+16:31:09.027983 [info ]: Started analysis jstanous_None.total_revenue
+16:31:09.027993 [debug]: Started rendering analysis jstanous_None.total_revenue
+16:31:09.028030 [info ]: Started analysis jstanous_None.order_status_values
+16:31:09.028045 [debug]: Started rendering analysis jstanous_None.order_status_values
+16:31:09.028058 [info ]: Started analysis jstanous_None.interactive_ad_hoc_testing
+16:31:09.028064 [debug]: Started rendering analysis jstanous_None.interactive_ad_hoc_testing
+16:31:09.028077 [info ]: Started model jstanous_staging.stg_jaffle_shop__customers
+16:31:09.028084 [debug]: Started rendering model jstanous_staging.stg_jaffle_shop__customers
+16:31:09.028096 [info ]: Started model jstanous_intermediate.eph_payments_successful
+16:31:09.028103 [debug]: Started rendering model jstanous_intermediate.eph_payments_successful
+16:31:09.028114 [info ]: Started model jstanous_staging.stg_stripe__payments
+16:31:09.028123 [debug]: Started rendering model jstanous_staging.stg_stripe__payments
+16:31:09.028133 [info ]: Started model jstanous_staging.stg_jaffle_shop__orders
+16:31:09.028139 [debug]: Started rendering model jstanous_staging.stg_jaffle_shop__orders
+16:31:09.028479 [info ]:  Succeeded [  0.00s] seed  jstanous_ref.payment_status (table)
+16:31:09.028526 [debug]: Finished rendering [  0.00s] seed jstanous_ref.payment_status [success]
+16:31:09.028604 [info ]:  Succeeded [  0.00s] seed  jstanous_ref.payment_method (table)
+16:31:09.028618 [debug]: Finished rendering [  0.00s] seed jstanous_ref.payment_method [success]
+16:31:09.028639 [info ]:  Succeeded [  0.00s] seed  jstanous_ref.order_status (table)
+16:31:09.028649 [debug]: Finished rendering [  0.00s] seed jstanous_ref.order_status [success]
+16:31:09.028667 [info ]:  Succeeded [  0.00s] seed  jstanous_ref.employees (table)
+16:31:09.028676 [debug]: Finished rendering [  0.00s] seed jstanous_ref.employees [success]
+16:31:09.028695 [info ]:  Succeeded [  0.00s] seed  jstanous_ref.customer_status (table)
+16:31:09.028705 [debug]: Finished rendering [  0.00s] seed jstanous_ref.customer_status [success]
+16:31:09.041942 [info ]:  Succeeded [  0.01s] seed  jstanous_dbt_proj_eval.dbt_project_evaluator_exceptions (table)
+16:31:09.041992 [debug]: Finished rendering [  0.01s] seed jstanous_dbt_proj_eval.dbt_project_evaluator_exceptions [success]
+16:31:09.044365 [debug]: Compiled SQL for node model.jaffle_shop.fct_customer_orders at target\.lsp\compiled\models\marts\finance\fct_customer_orders.sql
+16:31:09.056860 [debug]: Finished rendering [  0.03s] model jstanous_marts_finance.fct_customer_orders [success]
+16:31:09.056915 [info ]: Started analyzing (68 nodes)
+16:31:09.056928 [debug]: Started analyzing model jstanous_marts_finance.fct_customer_orders
+16:31:09.077351 [debug]: Compiled SQL for node model.jaffle_shop.eph_payments_failed at target\.lsp\compiled\models\intermediate\ephemeral\eph_payments_failed.sql
+16:31:09.085700 [debug]: Started analyzing model jstanous_intermediate.eph_payments_failed
+16:31:09.085764 [debug]: Finished rendering [  0.06s] model jstanous_intermediate.eph_payments_failed [success]
+16:31:09.091631 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_direct_join_to_source at target\.lsp\compiled\models\marts\dag\fct_direct_join_to_source.sql
+16:31:09.104732 [info ]:  Succeeded [  0.08s] model jstanous_marts_finance.fct_customer_orders (table)
+16:31:09.105007 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_chained_views_dependencies at target\.lsp\compiled\models\marts\performance\fct_chained_views_dependencies.sql
+16:31:09.105090 [debug]: Finished analyzing [  0.05s] model jstanous_marts_finance.fct_customer_orders [success]
+16:31:09.105167 [debug]: Finished rendering [  0.08s] model jstanous_dbt_proj_eval.fct_direct_join_to_source [success]
+16:31:09.105216 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_direct_join_to_source
+16:31:09.109562 [info ]:  Succeeded [  0.08s] model jstanous_intermediate.eph_payments_failed (ephemeral)
+16:31:09.109597 [debug]: Finished analyzing [  0.02s] model jstanous_intermediate.eph_payments_failed [success]
+16:31:09.157404 [debug]: Finished rendering [  0.13s] model jstanous_dbt_proj_eval.fct_chained_views_dependencies [success]
+16:31:09.158682 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_chained_views_dependencies
+16:31:09.175153 [info ]:  Succeeded [  0.14s] model jstanous_dbt_proj_eval.fct_chained_views_dependencies (view)
+16:31:09.175209 [debug]: Finished analyzing [  0.02s] model jstanous_dbt_proj_eval.fct_chained_views_dependencies [success]
+16:31:09.197970 [debug]: Compiled SQL for node model.dbt_project_evaluator.stg_naming_convention_prefixes at target\.lsp\compiled\models\staging\variables\stg_naming_convention_prefixes.sql
+16:31:09.205346 [debug]: Finished rendering [  0.18s] model jstanous_dbt_proj_eval.stg_naming_convention_prefixes [success]
+16:31:09.205390 [debug]: Started analyzing model jstanous_dbt_proj_eval.stg_naming_convention_prefixes
+16:31:09.208355 [debug]: Compiled SQL for node model.dbt_project_evaluator.stg_naming_convention_folders at target\.lsp\compiled\models\staging\variables\stg_naming_convention_folders.sql
+16:31:09.242755 [info ]:  Succeeded [  0.21s] model jstanous_dbt_proj_eval.stg_naming_convention_prefixes (view)
+16:31:09.242811 [debug]: Finished analyzing [  0.04s] model jstanous_dbt_proj_eval.stg_naming_convention_prefixes [success]
+16:31:09.242881 [debug]: Finished rendering [  0.22s] model jstanous_dbt_proj_eval.stg_naming_convention_folders [success]
+16:31:09.242902 [debug]: Started analyzing model jstanous_dbt_proj_eval.stg_naming_convention_folders
+16:31:09.243049 [info ]:  Succeeded [  0.21s] model jstanous_dbt_proj_eval.fct_direct_join_to_source (table)
+16:31:09.243070 [debug]: Finished analyzing [  0.14s] model jstanous_dbt_proj_eval.fct_direct_join_to_source [success]
+16:31:09.243135 [info ]:  Succeeded [  0.21s] model jstanous_dbt_proj_eval.stg_naming_convention_folders (view)
+16:31:09.243153 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.stg_naming_convention_folders [success]
+16:31:09.278901 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target\.lsp\compiled\models\marts\finance\fct_orders.sql
+16:31:09.280653 [debug]: Finished rendering [  0.25s] model jstanous_marts_finance.fct_orders [success]
+16:31:09.281022 [debug]: Started analyzing model jstanous_marts_finance.fct_orders
+16:31:09.281401 [info ]:  Succeeded [  0.25s] model jstanous_marts_finance.fct_orders (table)
+16:31:09.281431 [debug]: Finished analyzing [  0.00s] model jstanous_marts_finance.fct_orders [success]
+16:31:09.295407 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers.v1 at target\.lsp\compiled\models\marts\dim_customers_v1.sql
+16:31:09.296536 [debug]: Finished rendering [  0.27s] model jstanous_marts.dim_customers_v1 [success]
+16:31:09.296587 [debug]: Started analyzing model jstanous_marts.dim_customers_v1
+16:31:09.297550 [info ]:  Succeeded [  0.27s] model jstanous_marts.dim_customers_v1 (table)
+16:31:09.297585 [debug]: Finished analyzing [  0.00s] model jstanous_marts.dim_customers_v1 [success]
+16:31:09.304386 [debug]: Compiled SQL for node model.dbt_project_evaluator.int_all_dag_relationships at target\.lsp\compiled\models\marts\core\int_all_dag_relationships.sql
+16:31:09.306285 [debug]: Finished rendering [  0.28s] model jstanous_dbt_proj_eval.int_all_dag_relationships [success]
+16:31:09.306381 [debug]: Started analyzing model jstanous_dbt_proj_eval.int_all_dag_relationships
+16:31:09.322027 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe__payments at target\.lsp\compiled\models\staging\stripe\stg_stripe__payments.sql
+16:31:09.328846 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop__customers at target\.lsp\compiled\models\staging\jaffle_shop\stg_jaffle_shop__customers.sql
+16:31:09.331331 [debug]: Finished rendering [  0.30s] model jstanous_staging.stg_stripe__payments [success]
+16:31:09.331467 [debug]: Started analyzing model jstanous_staging.stg_stripe__payments
+16:31:09.331526 [debug]: Started analyzing model jstanous_staging.stg_jaffle_shop__customers
+16:31:09.331545 [debug]: Finished rendering [  0.30s] model jstanous_staging.stg_jaffle_shop__customers [success]
+16:31:09.340640 [info ]:  Succeeded [  0.31s] model jstanous_staging.stg_stripe__payments (view)
+16:31:09.340690 [debug]: Finished analyzing [  0.01s] model jstanous_staging.stg_stripe__payments [success]
+16:31:09.341478 [info ]:  Succeeded [  0.31s] model jstanous_staging.stg_jaffle_shop__customers (view)
+16:31:09.341505 [debug]: Finished analyzing [  0.01s] model jstanous_staging.stg_jaffle_shop__customers [success]
+16:31:09.345443 [debug]: Compiled SQL for node model.jaffle_shop.eph_orders_sequences at target\.lsp\compiled\models\intermediate\ephemeral\eph_orders_sequences.sql
+16:31:09.345838 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop__orders at target\.lsp\compiled\models\staging\jaffle_shop\stg_jaffle_shop__orders.sql
+16:31:09.357791 [debug]: Finished rendering [  0.33s] model jstanous_intermediate.eph_orders_sequences [success]
+16:31:09.357842 [debug]: Started analyzing model jstanous_intermediate.eph_orders_sequences
+16:31:09.357878 [debug]: Started analyzing model jstanous_staging.stg_jaffle_shop__orders
+16:31:09.357901 [debug]: Finished rendering [  0.33s] model jstanous_staging.stg_jaffle_shop__orders [success]
+16:31:09.373779 [info ]:  Succeeded [  0.34s] model jstanous_intermediate.eph_orders_sequences (ephemeral)
+16:31:09.373832 [debug]: Finished analyzing [  0.02s] model jstanous_intermediate.eph_orders_sequences [success]
+16:31:09.374092 [info ]:  Succeeded [  0.34s] model jstanous_staging.stg_jaffle_shop__orders (view)
+16:31:09.374110 [debug]: Finished analyzing [  0.02s] model jstanous_staging.stg_jaffle_shop__orders [success]
+16:31:09.375182 [debug]: Compiled SQL for node model.jaffle_shop.eph_payments_successful at target\.lsp\compiled\models\intermediate\ephemeral\eph_payments_successful.sql
+16:31:09.381296 [info ]:  Succeeded [  0.35s] model jstanous_dbt_proj_eval.int_all_dag_relationships (view)
+16:31:09.381334 [debug]: Finished analyzing [  0.07s] model jstanous_dbt_proj_eval.int_all_dag_relationships [success]
+16:31:09.381388 [debug]: Finished rendering [  0.35s] model jstanous_intermediate.eph_payments_successful [success]
+16:31:09.381412 [info ]: Started model jstanous_intermediate.eph_orders_paid
+16:31:09.381425 [debug]: Started rendering model jstanous_intermediate.eph_orders_paid
+16:31:09.381446 [info ]: Started model jstanous_intermediate.eph_orders_customer_running_sales
+16:31:09.381455 [debug]: Started rendering model jstanous_intermediate.eph_orders_customer_running_sales
+16:31:09.381496 [info ]: Started analysis jstanous_None.JaffleShop_datatests
+16:31:09.381508 [debug]: Started rendering analysis jstanous_None.JaffleShop_datatests
+16:31:09.381526 [info ]: Started model jstanous_intermediate.int_payments
+16:31:09.381534 [debug]: Started rendering model jstanous_intermediate.int_payments
+16:31:09.381546 [debug]: Started analyzing model jstanous_intermediate.eph_payments_successful
+16:31:09.382806 [info ]:  Succeeded [  0.35s] model jstanous_intermediate.eph_payments_successful (ephemeral)
+16:31:09.382842 [debug]: Finished analyzing [  0.00s] model jstanous_intermediate.eph_payments_successful [success]
+16:31:09.482651 [debug]: Compiled SQL for node model.dbt_project_evaluator.int_model_test_summary at target\.lsp\compiled\models\marts\tests\intermediate\int_model_test_summary.sql
+16:31:09.487862 [debug]: Finished rendering [  0.46s] model jstanous_dbt_proj_eval.int_model_test_summary [success]
+16:31:09.487906 [debug]: Started analyzing model jstanous_dbt_proj_eval.int_model_test_summary
+16:31:09.514679 [debug]: Compiled SQL for node model.dbt_project_evaluator.int_all_graph_resources at target\.lsp\compiled\models\marts\core\int_all_graph_resources.sql
+16:31:09.522811 [debug]: Finished rendering [  0.50s] model jstanous_dbt_proj_eval.int_all_graph_resources [success]
+16:31:09.522855 [debug]: Started analyzing model jstanous_dbt_proj_eval.int_all_graph_resources
+16:31:09.526730 [debug]: Compiled SQL for node analysis.jaffle_shop.total_revenue at target\.lsp\compiled\analyses\total_revenue.sql
+16:31:09.539469 [debug]: Compiled SQL for node model.dbt_project_evaluator.int_direct_relationships at target\.lsp\compiled\models\marts\core\int_direct_relationships.sql
+16:31:09.556373 [debug]: Compiled SQL for node model.jaffle_shop.eph_orders_customer_running_sales at target\.lsp\compiled\models\intermediate\ephemeral\eph_orders_customer_running_sales.sql
+16:31:09.563461 [info ]:  Succeeded [  0.54s] model jstanous_dbt_proj_eval.int_model_test_summary (view)
+16:31:09.563498 [debug]: Finished analyzing [  0.08s] model jstanous_dbt_proj_eval.int_model_test_summary [success]
+16:31:09.563583 [debug]: Finished rendering [  0.54s] analysis jstanous_None.total_revenue [success]
+16:31:09.563607 [debug]: Started analyzing analysis jstanous_None.total_revenue
+16:31:09.563645 [debug]: Finished rendering [  0.18s] model jstanous_intermediate.eph_orders_customer_running_sales [success]
+16:31:09.563659 [debug]: Started analyzing model jstanous_intermediate.eph_orders_customer_running_sales
+16:31:09.563684 [debug]: Finished rendering [  0.54s] model jstanous_dbt_proj_eval.int_direct_relationships [success]
+16:31:09.563697 [debug]: Started analyzing model jstanous_dbt_proj_eval.int_direct_relationships
+16:31:09.563938 [info ]:  Succeeded [  0.54s] analysis jstanous_None.total_revenue (analysis)
+16:31:09.563956 [debug]: Finished analyzing [  0.00s] analysis jstanous_None.total_revenue [success]
+16:31:09.587741 [info ]:  Succeeded [  0.21s] model jstanous_intermediate.eph_orders_customer_running_sales (ephemeral)
+16:31:09.587806 [debug]: Finished analyzing [  0.02s] model jstanous_intermediate.eph_orders_customer_running_sales [success]
+16:31:09.639742 [info ]:  Succeeded [  0.61s] model jstanous_dbt_proj_eval.int_direct_relationships (view)
+16:31:09.639801 [debug]: Finished analyzing [  0.08s] model jstanous_dbt_proj_eval.int_direct_relationships [success]
+16:31:09.649215 [debug]: Compiled SQL for node model.jaffle_shop.eph_orders_paid at target\.lsp\compiled\models\intermediate\ephemeral\eph_orders_paid.sql
+16:31:09.654902 [debug]: Finished rendering [  0.27s] model jstanous_intermediate.eph_orders_paid [success]
+16:31:09.654960 [info ]: Started model jstanous_intermediate.eph_customer_orders_stats
+16:31:09.654977 [debug]: Started rendering model jstanous_intermediate.eph_customer_orders_stats
+16:31:09.654997 [debug]: Started analyzing model jstanous_intermediate.eph_orders_paid
+16:31:09.655012 [info ]: Started model jstanous_intermediate.int_orders
+16:31:09.655021 [debug]: Started rendering model jstanous_intermediate.int_orders
+16:31:09.655161 [debug]: Compiled SQL for node model.jaffle_shop.int_payments at target\.lsp\compiled\models\intermediate\int_payments.sql
+16:31:09.658932 [info ]:  Succeeded [  0.28s] model jstanous_intermediate.eph_orders_paid (ephemeral)
+16:31:09.658967 [debug]: Finished analyzing [  0.00s] model jstanous_intermediate.eph_orders_paid [success]
+16:31:09.659006 [debug]: Finished rendering [  0.28s] model jstanous_intermediate.int_payments [success]
+16:31:09.659025 [debug]: Started analyzing model jstanous_intermediate.int_payments
+16:31:09.669685 [info ]:  Succeeded [  0.29s] model jstanous_intermediate.int_payments (view)
+16:31:09.669743 [debug]: Finished analyzing [  0.01s] model jstanous_intermediate.int_payments [success]
+16:31:09.689591 [debug]: Compiled SQL for node analysis.jaffle_shop.order_status_values at target\.lsp\compiled\analyses\order_status_values.sql
+16:31:09.691683 [debug]: Compiled SQL for node model.jaffle_shop.eph_customer_orders_stats at target\.lsp\compiled\models\intermediate\ephemeral\eph_customer_orders_stats.sql
+16:31:09.692349 [debug]: Compiled SQL for node model.dbt_project_evaluator.stg_node_relationships at target\.lsp\compiled\models\staging\graph\stg_node_relationships.sql
+16:31:09.693278 [debug]: Compiled SQL for node model.jaffle_shop.int_orders at target\.lsp\compiled\models\intermediate\int_orders.sql
+16:31:09.694188 [debug]: Finished rendering [  0.67s] analysis jstanous_None.order_status_values [success]
+16:31:09.694243 [debug]: Started analyzing analysis jstanous_None.order_status_values
+16:31:09.708990 [info ]:  Succeeded [  0.68s] model jstanous_dbt_proj_eval.int_all_graph_resources (table)
+16:31:09.709041 [debug]: Finished analyzing [  0.19s] model jstanous_dbt_proj_eval.int_all_graph_resources [success]
+16:31:09.709111 [debug]: Finished rendering [  0.05s] model jstanous_intermediate.eph_customer_orders_stats [success]
+16:31:09.709132 [debug]: Started analyzing model jstanous_intermediate.eph_customer_orders_stats
+16:31:09.709195 [info ]: Started model jstanous_intermediate.int_customers
+16:31:09.709209 [debug]: Started rendering model jstanous_intermediate.int_customers
+16:31:09.709242 [debug]: Finished rendering [  0.05s] model jstanous_intermediate.int_orders [success]
+16:31:09.709254 [debug]: Started analyzing model jstanous_intermediate.int_orders
+16:31:09.709274 [debug]: Finished rendering [  0.68s] model jstanous_dbt_proj_eval.stg_node_relationships [success]
+16:31:09.709286 [debug]: Started analyzing model jstanous_dbt_proj_eval.stg_node_relationships
+16:31:09.720284 [info ]:  Succeeded [  0.07s] model jstanous_intermediate.eph_customer_orders_stats (ephemeral)
+16:31:09.720320 [debug]: Finished analyzing [  0.01s] model jstanous_intermediate.eph_customer_orders_stats [success]
+16:31:09.729191 [info ]:  Succeeded [  0.07s] model jstanous_intermediate.int_orders (view)
+16:31:09.729224 [debug]: Finished analyzing [  0.02s] model jstanous_intermediate.int_orders [success]
+16:31:09.730238 [info ]:  Succeeded [  0.70s] model jstanous_dbt_proj_eval.stg_node_relationships (table)
+16:31:09.730269 [debug]: Finished analyzing [  0.02s] model jstanous_dbt_proj_eval.stg_node_relationships [success]
+16:31:09.741586 [debug]: Compiled SQL for node analysis.jaffle_shop.interactive_ad_hoc_testing at target\.lsp\compiled\analyses\interactive_ad_hoc_testing.sql
+16:31:09.745121 [debug]: Finished rendering [  0.72s] analysis jstanous_None.interactive_ad_hoc_testing [success]
+16:31:09.745175 [debug]: Started analyzing analysis jstanous_None.interactive_ad_hoc_testing
+16:31:09.747747 [info ]:  Succeeded [  0.72s] analysis jstanous_None.interactive_ad_hoc_testing (analysis)
+16:31:09.747779 [debug]: Finished analyzing [  0.00s] analysis jstanous_None.interactive_ad_hoc_testing [success]
+16:31:09.755628 [debug]: Compiled SQL for node model.jaffle_shop.int_customers at target\.lsp\compiled\models\intermediate\int_customers.sql
+16:31:09.758285 [debug]: Finished rendering [  0.05s] model jstanous_intermediate.int_customers [success]
+16:31:09.758326 [debug]: Started analyzing model jstanous_intermediate.int_customers
+16:31:09.761740 [info ]:  Succeeded [  0.05s] model jstanous_intermediate.int_customers (view)
+16:31:09.761773 [debug]: Finished analyzing [  0.00s] model jstanous_intermediate.int_customers [success]
+16:31:09.763427 [debug]: Compiled SQL for node analysis.jaffle_shop.JaffleShop_datatests at target\.lsp\compiled\analyses\JaffleShop_datatests.sql
+16:31:09.766224 [debug]: Finished rendering [  0.38s] analysis jstanous_None.JaffleShop_datatests [success]
+16:31:09.766283 [debug]: Started analyzing analysis jstanous_None.JaffleShop_datatests
+16:31:09.771986 [info ]:  Succeeded [  0.39s] analysis jstanous_None.JaffleShop_datatests (analysis)
+16:31:09.772021 [debug]: Finished analyzing [  0.01s] analysis jstanous_None.JaffleShop_datatests [success]
+16:31:09.799511 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers.v2 at target\.lsp\compiled\models\marts\dim_customers_v2.sql
+16:31:09.803484 [debug]: Finished rendering [  0.78s] model jstanous_marts.dim_customers_v2 [success]
+16:31:09.803530 [debug]: Started analyzing model jstanous_marts.dim_customers_v2
+16:31:09.803888 [info ]:  Succeeded [  0.78s] model jstanous_marts.dim_customers_v2 (table)
+16:31:09.803911 [debug]: Finished analyzing [  0.00s] model jstanous_marts.dim_customers_v2 [success]
+16:31:09.806613 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_undocumented_public_models at target\.lsp\compiled\models\marts\governance\fct_undocumented_public_models.sql
+16:31:09.808491 [debug]: Finished rendering [  0.78s] model jstanous_dbt_proj_eval.fct_undocumented_public_models [success]
+16:31:09.808533 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_undocumented_public_models
+16:31:09.820852 [info ]:  Succeeded [  0.79s] model jstanous_dbt_proj_eval.fct_undocumented_public_models (view)
+16:31:09.820906 [debug]: Finished analyzing [  0.01s] model jstanous_dbt_proj_eval.fct_undocumented_public_models [success]
+16:31:09.827862 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_exposure_parents_materializations at target\.lsp\compiled\models\marts\performance\fct_exposure_parents_materializations.sql
+16:31:09.828186 [debug]: Finished rendering [  0.80s] model jstanous_dbt_proj_eval.fct_exposure_parents_materializations [success]
+16:31:09.828232 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_exposure_parents_materializations
+16:31:09.839954 [info ]:  Succeeded [  0.81s] model jstanous_dbt_proj_eval.fct_exposure_parents_materializations (view)
+16:31:09.840012 [debug]: Finished analyzing [  0.01s] model jstanous_dbt_proj_eval.fct_exposure_parents_materializations [success]
+16:31:09.843344 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_exposures_dependent_on_private_models at target\.lsp\compiled\models\marts\governance\fct_exposures_dependent_on_private_models.sql
+16:31:09.843715 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_public_models_without_contract at target\.lsp\compiled\models\marts\governance\fct_public_models_without_contract.sql
+16:31:09.843911 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_public_models_without_contract
+16:31:09.843972 [debug]: Finished rendering [  0.82s] model jstanous_dbt_proj_eval.fct_exposures_dependent_on_private_models [success]
+16:31:09.844004 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_exposures_dependent_on_private_models
+16:31:09.844027 [debug]: Finished rendering [  0.82s] model jstanous_dbt_proj_eval.fct_public_models_without_contract [success]
+16:31:09.844645 [info ]:  Succeeded [  0.82s] model jstanous_dbt_proj_eval.fct_public_models_without_contract (view)
+16:31:09.844676 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.fct_public_models_without_contract [success]
+16:31:09.858144 [info ]:  Succeeded [  0.83s] model jstanous_dbt_proj_eval.fct_exposures_dependent_on_private_models (view)
+16:31:09.858200 [debug]: Finished analyzing [  0.01s] model jstanous_dbt_proj_eval.fct_exposures_dependent_on_private_models [success]
+16:31:09.863759 [debug]: Compiled SQL for node model.dbt_project_evaluator.base_node_relationships at target\.lsp\compiled\models\staging\graph\base\base_node_relationships.sql
+16:31:09.864061 [debug]: Finished rendering [  0.84s] model jstanous_dbt_proj_eval.base_node_relationships [success]
+16:31:09.864112 [debug]: Started analyzing model jstanous_dbt_proj_eval.base_node_relationships
+16:31:09.864274 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_missing_primary_key_tests at target\.lsp\compiled\models\marts\tests\fct_missing_primary_key_tests.sql
+16:31:09.864791 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_test_coverage at target\.lsp\compiled\models\marts\tests\fct_test_coverage.sql
+16:31:09.865108 [debug]: Compiled SQL for node model.dbt_project_evaluator.base_node_columns at target\.lsp\compiled\models\staging\graph\base\base_node_columns.sql
+16:31:09.866016 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_sources_without_freshness at target\.lsp\compiled\models\marts\tests\fct_sources_without_freshness.sql
+16:31:09.866237 [info ]:  Succeeded [  0.84s] model jstanous_dbt_proj_eval.base_node_relationships (table)
+16:31:09.866266 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.base_node_relationships [success]
+16:31:09.866316 [debug]: Finished rendering [  0.84s] model jstanous_dbt_proj_eval.fct_missing_primary_key_tests [success]
+16:31:09.866356 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_missing_primary_key_tests
+16:31:09.866406 [debug]: Started analyzing model jstanous_dbt_proj_eval.base_node_columns
+16:31:09.866427 [debug]: Finished rendering [  0.84s] model jstanous_dbt_proj_eval.fct_test_coverage [success]
+16:31:09.866440 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_test_coverage
+16:31:09.866457 [debug]: Finished rendering [  0.84s] model jstanous_dbt_proj_eval.base_node_columns [success]
+16:31:09.878945 [info ]:  Succeeded [  0.85s] model jstanous_dbt_proj_eval.fct_missing_primary_key_tests (view)
+16:31:09.878981 [debug]: Finished analyzing [  0.01s] model jstanous_dbt_proj_eval.fct_missing_primary_key_tests [success]
+16:31:09.880611 [info ]:  Succeeded [  0.85s] model jstanous_dbt_proj_eval.base_node_columns (table)
+16:31:09.880648 [debug]: Finished analyzing [  0.01s] model jstanous_dbt_proj_eval.base_node_columns [success]
+16:31:09.880682 [debug]: Finished rendering [  0.85s] model jstanous_dbt_proj_eval.fct_sources_without_freshness [success]
+16:31:09.880705 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_sources_without_freshness
+16:31:09.959356 [debug]: Compiled SQL for node model.dbt_project_evaluator.base_exposure_relationships at target\.lsp\compiled\models\staging\graph\base\base_exposure_relationships.sql
+16:31:09.959804 [debug]: Compiled SQL for node model.dbt_project_evaluator.base_metric_relationships at target\.lsp\compiled\models\staging\graph\base\base_metric_relationships.sql
+16:31:09.961052 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_test_directories at target\.lsp\compiled\models\marts\structure\fct_test_directories.sql
+16:31:09.992608 [debug]: Compiled SQL for node model.dbt_project_evaluator.base_source_columns at target\.lsp\compiled\models\staging\graph\base\base_source_columns.sql
+16:31:10.005697 [info ]:  Succeeded [  0.98s] model jstanous_dbt_proj_eval.fct_test_coverage (view)
+16:31:10.005733 [debug]: Finished analyzing [  0.14s] model jstanous_dbt_proj_eval.fct_test_coverage [success]
+16:31:10.006561 [info ]:  Succeeded [  0.98s] model jstanous_dbt_proj_eval.fct_sources_without_freshness (view)
+16:31:10.006585 [debug]: Finished analyzing [  0.13s] model jstanous_dbt_proj_eval.fct_sources_without_freshness [success]
+16:31:10.006653 [debug]: Finished rendering [  0.98s] model jstanous_dbt_proj_eval.base_exposure_relationships [success]
+16:31:10.006677 [debug]: Started analyzing model jstanous_dbt_proj_eval.base_exposure_relationships
+16:31:10.006712 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_test_directories
+16:31:10.006730 [debug]: Finished rendering [  0.98s] model jstanous_dbt_proj_eval.base_metric_relationships [success]
+16:31:10.006742 [debug]: Started analyzing model jstanous_dbt_proj_eval.base_metric_relationships
+16:31:10.006760 [debug]: Finished rendering [  0.98s] model jstanous_dbt_proj_eval.fct_test_directories [success]
+16:31:10.007064 [info ]:  Succeeded [  0.98s] model jstanous_dbt_proj_eval.base_exposure_relationships (table)
+16:31:10.007080 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.base_exposure_relationships [success]
+16:31:10.010580 [info ]:  Succeeded [  0.98s] model jstanous_dbt_proj_eval.fct_test_directories (view)
+16:31:10.010631 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.fct_test_directories [success]
+16:31:10.010673 [debug]: Finished rendering [  0.98s] model jstanous_dbt_proj_eval.base_source_columns [success]
+16:31:10.010695 [debug]: Started analyzing model jstanous_dbt_proj_eval.base_source_columns
+16:31:10.011140 [info ]:  Succeeded [  0.98s] model jstanous_dbt_proj_eval.base_metric_relationships (table)
+16:31:10.011162 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.base_metric_relationships [success]
+16:31:10.011539 [info ]:  Succeeded [  0.98s] model jstanous_dbt_proj_eval.base_source_columns (table)
+16:31:10.011561 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.base_source_columns [success]
+16:31:10.013979 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_unused_sources at target\.lsp\compiled\models\marts\dag\fct_unused_sources.sql
+16:31:10.025862 [info ]:  Succeeded [  1.00s] analysis jstanous_None.order_status_values (analysis)
+16:31:10.025911 [debug]: Finished analyzing [  0.33s] analysis jstanous_None.order_status_values [success]
+16:31:10.025976 [debug]: Finished rendering [  1.00s] model jstanous_dbt_proj_eval.fct_unused_sources [success]
+16:31:10.026000 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_unused_sources
+16:31:10.028062 [info ]:  Succeeded [  1.00s] model jstanous_dbt_proj_eval.fct_unused_sources (table)
+16:31:10.028097 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.fct_unused_sources [success]
+16:31:10.040734 [debug]: Compiled SQL for node model.dbt_project_evaluator.stg_metric_relationships at target\.lsp\compiled\models\staging\graph\stg_metric_relationships.sql
+16:31:10.041018 [debug]: Finished rendering [  1.01s] model jstanous_dbt_proj_eval.stg_metric_relationships [success]
+16:31:10.041054 [debug]: Started analyzing model jstanous_dbt_proj_eval.stg_metric_relationships
+16:31:10.041521 [info ]:  Succeeded [  1.01s] model jstanous_dbt_proj_eval.stg_metric_relationships (view)
+16:31:10.041543 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.stg_metric_relationships [success]
+16:31:10.044081 [debug]: Compiled SQL for node model.dbt_project_evaluator.stg_exposure_relationships at target\.lsp\compiled\models\staging\graph\stg_exposure_relationships.sql
+16:31:10.044302 [debug]: Finished rendering [  1.02s] model jstanous_dbt_proj_eval.stg_exposure_relationships [success]
+16:31:10.044346 [debug]: Started analyzing model jstanous_dbt_proj_eval.stg_exposure_relationships
+16:31:10.044934 [info ]:  Succeeded [  1.02s] model jstanous_dbt_proj_eval.stg_exposure_relationships (view)
+16:31:10.044965 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.stg_exposure_relationships [success]
+16:31:10.046507 [debug]: Compiled SQL for node model.dbt_project_evaluator.stg_sources at target\.lsp\compiled\models\staging\graph\stg_sources.sql
+16:31:10.046714 [debug]: Compiled SQL for node model.dbt_project_evaluator.stg_nodes at target\.lsp\compiled\models\staging\graph\stg_nodes.sql
+16:31:10.046754 [debug]: Finished rendering [  1.02s] model jstanous_dbt_proj_eval.stg_sources [success]
+16:31:10.046788 [debug]: Started analyzing model jstanous_dbt_proj_eval.stg_sources
+16:31:10.046818 [debug]: Started analyzing model jstanous_dbt_proj_eval.stg_nodes
+16:31:10.046837 [debug]: Finished rendering [  1.02s] model jstanous_dbt_proj_eval.stg_nodes [success]
+16:31:10.047659 [info ]:  Succeeded [  1.02s] model jstanous_dbt_proj_eval.stg_sources (table)
+16:31:10.047699 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.stg_sources [success]
+16:31:10.047716 [info ]:  Succeeded [  1.02s] model jstanous_dbt_proj_eval.stg_nodes (table)
+16:31:10.047728 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.stg_nodes [success]
+16:31:10.048471 [debug]: Compiled SQL for node model.dbt_project_evaluator.stg_metrics at target\.lsp\compiled\models\staging\graph\stg_metrics.sql
+16:31:10.048727 [debug]: Finished rendering [  1.02s] model jstanous_dbt_proj_eval.stg_metrics [success]
+16:31:10.048760 [debug]: Started analyzing model jstanous_dbt_proj_eval.stg_metrics
+16:31:10.049397 [info ]:  Succeeded [  1.02s] model jstanous_dbt_proj_eval.stg_metrics (table)
+16:31:10.049537 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.stg_metrics [success]
+16:31:10.049838 [debug]: Compiled SQL for node model.dbt_project_evaluator.stg_exposures at target\.lsp\compiled\models\staging\graph\stg_exposures.sql
+16:31:10.050077 [debug]: Finished rendering [  1.02s] model jstanous_dbt_proj_eval.stg_exposures [success]
+16:31:10.050110 [debug]: Started analyzing model jstanous_dbt_proj_eval.stg_exposures
+16:31:10.053096 [info ]:  Succeeded [  1.02s] model jstanous_dbt_proj_eval.stg_exposures (table)
+16:31:10.053150 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.stg_exposures [success]
+16:31:10.081440 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_documentation_coverage at target\.lsp\compiled\models\marts\documentation\fct_documentation_coverage.sql
+16:31:10.081741 [debug]: Finished rendering [  1.05s] model jstanous_dbt_proj_eval.fct_documentation_coverage [success]
+16:31:10.081779 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_documentation_coverage
+16:31:10.090817 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_source_directories at target\.lsp\compiled\models\marts\structure\fct_source_directories.sql
+16:31:10.092129 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_model_directories at target\.lsp\compiled\models\marts\structure\fct_model_directories.sql
+16:31:10.092338 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_model_directories
+16:31:10.092372 [debug]: Finished rendering [  1.07s] model jstanous_dbt_proj_eval.fct_source_directories [success]
+16:31:10.092409 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_source_directories
+16:31:10.092432 [debug]: Finished rendering [  1.07s] model jstanous_dbt_proj_eval.fct_model_directories [success]
+16:31:10.094133 [info ]:  Succeeded [  1.07s] model jstanous_dbt_proj_eval.fct_documentation_coverage (view)
+16:31:10.094165 [debug]: Finished analyzing [  0.01s] model jstanous_dbt_proj_eval.fct_documentation_coverage [success]
+16:31:10.094987 [info ]:  Succeeded [  1.07s] model jstanous_dbt_proj_eval.fct_source_directories (view)
+16:31:10.095012 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.fct_source_directories [success]
+16:31:10.095635 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_model_naming_conventions at target\.lsp\compiled\models\marts\structure\fct_model_naming_conventions.sql
+16:31:10.095973 [info ]:  Succeeded [  1.07s] model jstanous_dbt_proj_eval.fct_model_directories (view)
+16:31:10.096001 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.fct_model_directories [success]
+16:31:10.096048 [debug]: Finished rendering [  1.07s] model jstanous_dbt_proj_eval.fct_model_naming_conventions [success]
+16:31:10.096068 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_model_naming_conventions
+16:31:10.109996 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_undocumented_sources at target\.lsp\compiled\models\marts\documentation\fct_undocumented_sources.sql
+16:31:10.111822 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_undocumented_models at target\.lsp\compiled\models\marts\documentation\fct_undocumented_models.sql
+16:31:10.112020 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_undocumented_source_tables at target\.lsp\compiled\models\marts\documentation\fct_undocumented_source_tables.sql
+16:31:10.113145 [info ]:  Succeeded [  1.08s] model jstanous_dbt_proj_eval.fct_model_naming_conventions (view)
+16:31:10.113179 [debug]: Finished analyzing [  0.02s] model jstanous_dbt_proj_eval.fct_model_naming_conventions [success]
+16:31:10.113255 [debug]: Finished rendering [  1.09s] model jstanous_dbt_proj_eval.fct_undocumented_sources [success]
+16:31:10.113278 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_undocumented_sources
+16:31:10.113303 [debug]: Finished rendering [  1.09s] model jstanous_dbt_proj_eval.fct_undocumented_source_tables [success]
+16:31:10.113315 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_undocumented_source_tables
+16:31:10.113339 [debug]: Finished rendering [  1.09s] model jstanous_dbt_proj_eval.fct_undocumented_models [success]
+16:31:10.113350 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_undocumented_models
+16:31:10.113809 [info ]:  Succeeded [  1.09s] model jstanous_dbt_proj_eval.fct_undocumented_sources (view)
+16:31:10.113834 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.fct_undocumented_sources [success]
+16:31:10.113901 [info ]:  Succeeded [  1.09s] model jstanous_dbt_proj_eval.fct_undocumented_source_tables (view)
+16:31:10.113919 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.fct_undocumented_source_tables [success]
+16:31:10.114197 [info ]:  Succeeded [  1.09s] model jstanous_dbt_proj_eval.fct_undocumented_models (view)
+16:31:10.114216 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.fct_undocumented_models [success]
+16:31:10.115273 [debug]: Compiled SQL for node model.dbt_project_evaluator.stg_columns at target\.lsp\compiled\models\staging\graph\stg_columns.sql
+16:31:10.116595 [debug]: Finished rendering [  1.09s] model jstanous_dbt_proj_eval.stg_columns [success]
+16:31:10.116638 [debug]: Started analyzing model jstanous_dbt_proj_eval.stg_columns
+16:31:10.123812 [info ]:  Succeeded [  1.10s] model jstanous_dbt_proj_eval.stg_columns (view)
+16:31:10.123846 [debug]: Finished analyzing [  0.01s] model jstanous_dbt_proj_eval.stg_columns [success]
+16:31:10.423158 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_too_many_joins at target\.lsp\compiled\models\marts\dag\fct_too_many_joins.sql
+16:31:10.424620 [debug]: Finished rendering [  1.40s] model jstanous_dbt_proj_eval.fct_too_many_joins [success]
+16:31:10.424664 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_too_many_joins
+16:31:10.424754 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_staging_dependent_on_staging at target\.lsp\compiled\models\marts\dag\fct_staging_dependent_on_staging.sql
+16:31:10.425016 [debug]: Finished rendering [  1.40s] model jstanous_dbt_proj_eval.fct_staging_dependent_on_staging [success]
+16:31:10.425049 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_staging_dependent_on_staging
+16:31:10.429414 [info ]:  Succeeded [  1.40s] model jstanous_dbt_proj_eval.fct_staging_dependent_on_staging (table)
+16:31:10.429450 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.fct_staging_dependent_on_staging [success]
+16:31:10.446935 [info ]:  Succeeded [  1.42s] model jstanous_dbt_proj_eval.fct_too_many_joins (table)
+16:31:10.446993 [debug]: Finished analyzing [  0.02s] model jstanous_dbt_proj_eval.fct_too_many_joins [success]
+16:31:10.457288 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_source_fanout at target\.lsp\compiled\models\marts\dag\fct_source_fanout.sql
+16:31:10.461210 [debug]: Finished rendering [  1.43s] model jstanous_dbt_proj_eval.fct_source_fanout [success]
+16:31:10.461265 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_source_fanout
+16:31:10.462547 [info ]:  Succeeded [  1.44s] model jstanous_dbt_proj_eval.fct_source_fanout (table)
+16:31:10.462579 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.fct_source_fanout [success]
+16:31:10.495806 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_staging_dependent_on_marts_or_intermediate at target\.lsp\compiled\models\marts\dag\fct_staging_dependent_on_marts_or_intermediate.sql
+16:31:10.496640 [debug]: Finished rendering [  1.47s] model jstanous_dbt_proj_eval.fct_staging_dependent_on_marts_or_intermediate [success]
+16:31:10.496683 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_staging_dependent_on_marts_or_intermediate
+16:31:10.497891 [info ]:  Succeeded [  1.47s] model jstanous_dbt_proj_eval.fct_staging_dependent_on_marts_or_intermediate (table)
+16:31:10.497921 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.fct_staging_dependent_on_marts_or_intermediate [success]
+16:31:10.574640 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_model_fanout at target\.lsp\compiled\models\marts\dag\fct_model_fanout.sql
+16:31:10.575879 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_root_models at target\.lsp\compiled\models\marts\dag\fct_root_models.sql
+16:31:10.577136 [debug]: Finished rendering [  1.55s] model jstanous_dbt_proj_eval.fct_model_fanout [success]
+16:31:10.577197 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_model_fanout
+16:31:10.577234 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_root_models
+16:31:10.577254 [debug]: Finished rendering [  1.55s] model jstanous_dbt_proj_eval.fct_root_models [success]
+16:31:10.579493 [info ]:  Succeeded [  1.55s] model jstanous_dbt_proj_eval.fct_model_fanout (table)
+16:31:10.579527 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.fct_model_fanout [success]
+16:31:10.579838 [info ]:  Succeeded [  1.55s] model jstanous_dbt_proj_eval.fct_root_models (table)
+16:31:10.579857 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.fct_root_models [success]
+16:31:10.594249 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_rejoining_of_upstream_concepts at target\.lsp\compiled\models\marts\dag\fct_rejoining_of_upstream_concepts.sql
+16:31:10.595646 [debug]: Finished rendering [  1.57s] model jstanous_dbt_proj_eval.fct_rejoining_of_upstream_concepts [success]
+16:31:10.595690 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_rejoining_of_upstream_concepts
+16:31:10.612532 [info ]:  Succeeded [  1.58s] model jstanous_dbt_proj_eval.fct_rejoining_of_upstream_concepts (table)
+16:31:10.612589 [debug]: Finished analyzing [  0.02s] model jstanous_dbt_proj_eval.fct_rejoining_of_upstream_concepts [success]
+16:31:10.690289 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_hard_coded_references at target\.lsp\compiled\models\marts\dag\fct_hard_coded_references.sql
+16:31:10.706020 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_multiple_sources_joined at target\.lsp\compiled\models\marts\dag\fct_multiple_sources_joined.sql
+16:31:10.706427 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_duplicate_sources at target\.lsp\compiled\models\marts\dag\fct_duplicate_sources.sql
+16:31:10.706727 [debug]: Finished rendering [  1.68s] model jstanous_dbt_proj_eval.fct_hard_coded_references [success]
+16:31:10.706763 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_hard_coded_references
+16:31:10.706833 [debug]: Finished rendering [  1.68s] model jstanous_dbt_proj_eval.fct_duplicate_sources [success]
+16:31:10.706849 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_duplicate_sources
+16:31:10.706871 [debug]: Finished rendering [  1.68s] model jstanous_dbt_proj_eval.fct_multiple_sources_joined [success]
+16:31:10.706883 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_multiple_sources_joined
+16:31:10.707337 [info ]:  Succeeded [  1.68s] model jstanous_dbt_proj_eval.fct_hard_coded_references (table)
+16:31:10.707361 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.fct_hard_coded_references [success]
+16:31:10.714648 [info ]:  Succeeded [  1.69s] model jstanous_dbt_proj_eval.fct_duplicate_sources (table)
+16:31:10.714682 [debug]: Finished analyzing [  0.01s] model jstanous_dbt_proj_eval.fct_duplicate_sources [success]
+16:31:10.715638 [info ]:  Succeeded [  1.69s] model jstanous_dbt_proj_eval.fct_multiple_sources_joined (table)
+16:31:10.715671 [debug]: Finished analyzing [  0.01s] model jstanous_dbt_proj_eval.fct_multiple_sources_joined [success]
+16:31:10.743779 [debug]: Compiled SQL for node model.dbt_project_evaluator.fct_marts_or_intermediate_dependent_on_source at target\.lsp\compiled\models\marts\dag\fct_marts_or_intermediate_dependent_on_source.sql
+16:31:10.772319 [debug]: Finished rendering [  1.75s] model jstanous_dbt_proj_eval.fct_marts_or_intermediate_dependent_on_source [success]
+16:31:10.772346 [info ]: Finished rendering [  1.75s] (74 nodes, 0 skipped, 0 errors)
+16:31:10.772371 [debug]: Started analyzing model jstanous_dbt_proj_eval.fct_marts_or_intermediate_dependent_on_source
+16:31:10.773242 [info ]:  Succeeded [  1.75s] model jstanous_dbt_proj_eval.fct_marts_or_intermediate_dependent_on_source (table)
+16:31:10.773282 [debug]: Finished analyzing [  0.00s] model jstanous_dbt_proj_eval.fct_marts_or_intermediate_dependent_on_source [success]
+16:31:10.773293 [info ]: Finished analyzing [  1.72s] (68 nodes, 0 skipped, 0 errors)
+16:31:10.793248 [info ]: Started scheduling
+16:31:10.793444 [info ]: Finished scheduling [  0.00s]
+16:31:10.799595 [info ]: Cached model count updated: 64 models (accurate)
+==================== 2026-04-17T19:29:27.749544Z | cc5c6ec5-9a2f-4e05-83ff-17355f6189c0 ====================
+19:29:27.749771 [info ]: Starting dbt LSP server
+19:29:27.749933 [info ]: Connecting to LSP client on port 8000
+19:29:27.762819 [info ]: Successfully connected to LSP client
+19:29:27.762840 [info ]: Creating LSP service...
+19:29:28.144445 [info ]: Creating LSP server...
+19:29:28.144617 [info ]: Starting LSP server...
+19:29:28.677804 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-04-17T19:42:55.804031Z | c534e6e8-a9a7-4cf4-8bf7-325eb6987c9d ====================
+19:42:55.804310 [info ]: Starting dbt LSP server
+19:42:55.804434 [info ]: Connecting to LSP client on port 8000
+19:42:55.852991 [info ]: Successfully connected to LSP client
+19:42:55.853010 [info ]: Creating LSP service...
+19:42:56.055610 [info ]: Creating LSP server...
+19:42:56.055749 [info ]: Starting LSP server...
+19:43:30.078285 [info ]: Loading ~/.dbt/profiles.yml

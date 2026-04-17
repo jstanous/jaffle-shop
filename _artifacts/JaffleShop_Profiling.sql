@@ -1,0 +1,62 @@
+USE WAREHOUSE DBT_WH;
+USE DATABASE JAFFLE_SHOP;
+USE SCHEMA RAW;
+USE ROLE DBT_ROLE;
+
+SELECT * FROM CUSTOMERS;
+SELECT * FROM ORDERS;
+SELECT * FROM PAYMENTS;
+
+SELECT *
+  FROM CUSTOMERS C
+ WHERE NOT EXISTS
+      (SELECT NULL
+         FROM ORDERS O
+        WHERE C.ID  = O.USER_ID);
+
+
+SELECT *
+  FROM ORDERS O
+ WHERE NOT EXISTS
+      (SELECT NULL
+         FROM PAYMENTS P
+        WHERE O.ID  = P.ORDERID);
+
+SELECT *
+  FROM ORDERS O
+ WHERE NOT EXISTS
+      (SELECT NULL
+         FROM PAYMENTS P
+        WHERE O.ID  = P.ORDERID
+          AND STATUS = 'success');
+
+
+SELECT *
+  FROM PAYMENTS P
+ WHERE NOT EXISTS
+      (SELECT NULL
+         FROM ORDERS O
+        WHERE O.ID  = P.ORDERID);
+
+
+SELECT *
+  FROM ORDERS O
+  JOIN PAYMENTS P
+    ON O.ID  = P.ORDERID
+ WHERE NOT O.ORDER_DATE = P.CREATED;
+
+
+SELECT status
+  FROM PAYMENTS P
+ GROUP BY 1;
+
+SELECT paymentmethod
+  FROM PAYMENTS P
+ GROUP BY 1;
+
+SELECT *
+  FROM PAYMENTS P
+ where status = 'success'
+   and amount <> 0
+qualify (count(distinct paymentmethod) over(partition by orderid)) > 1
+order by orderid, paymentmethod
