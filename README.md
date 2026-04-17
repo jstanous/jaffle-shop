@@ -178,7 +178,3 @@ This project aligns with the **dbt Certified Developer Path**.
 
 MIT License — permissive use with attribution, no warranty.  
 See LICENSE in the repo.  
-
-## Final Thoughts  
-
-This project represents the current state of my dbt journey. Initially starting on **dbt Cloud**, moving to **VS Code** allows for isolating various projects. My own [dbt Multi-project Scaffold](https://github.com/jstanous/dbt-multiproject-scaffold) became increasingly more challenging to manage with each added project.  
